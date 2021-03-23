@@ -1,0 +1,166 @@
+*** Settings ***
+Library    String
+Library    AppiumLibrary    run_on_failure=Capture Page Screenshot      timeout=60s
+Library    Collections
+Library    Process
+Library    ../../python_library/common.py
+Resource   ../../resources/locators/common/common_locators.robot
+
+*** Keywords ***
+Open Apps
+    [Arguments]     ${app}    ${no_reset}=${False}
+    ${app_path_android}=    Get Canonical Path      ${CURDIR}/../../../app-path/Android/${app}
+    Set To Dictionary    ${${DEVICE}}    noReset=${no_reset}    app=${app_path_android}
+    ${OS}=    Convert To Lowercase        ${OS}
+    Run Keyword If      '${OS}' == 'android'
+    ...     Open Application    ${REMOTE_URL_ANDROID}    &{${DEVICE}}
+
+    ##OPEN DEFAULT OR SPECIFIC IOS SIMULATOR
+    ${app_path_ios}=    Get Canonical Path      ${CURDIR}/../../../app-path/iOS/tsm.app
+    Run Keyword If      '${OS}' == 'ios'
+    ...     Open Application    ${REMOTE_URL_IOS}
+    ...     platformName=&{${DEVICE}}[platformName]
+    ...     platformVersion=&{${DEVICE}}[platformVersion]
+    ...     deviceName=&{${DEVICE}}[deviceName]
+    ...     app=${app_path_ios}
+    ...     waitForAppScript='$.delay(5000); true'
+    ...     noReset=False
+    Set Suite Variable    ${OS}
+
+Close Test Application
+    Close All Applications
+        
+Hide The Keyboard
+     Run Keyword If    '${OS}' == 'android'      Hide Keyboard
+     Run Keyword If    '${OS}' == 'ios'          Hide Keyboard       &{keyboard}[keyboard_done]
+
+Swipe To Left
+     ${width}=    Get Window Width
+     ${height}=   Get Window Height
+     ${start_x}=      Evaluate    0.67 * ${width}
+     ${start_y}=      Evaluate    0.90 * ${height}
+     ${offset_x}=     Evaluate    0 * ${width}
+     ${offset_y}=     Evaluate    0.30 * ${height}
+     Swipe    ${start_x}    ${start_y}    ${offset_x}    ${offset_y}    1000
+
+Swipe Up
+    ${width}=    Get Window Width
+    ${height}=   Get Window Height
+    ${start_x}=      Evaluate    0.5 * ${width}
+    ${start_y}=      Evaluate    0.7 * ${height}
+    ${offset_x}=     Evaluate    0.5 * ${width}
+    ${offset_y}=     Evaluate    0.3 * ${height}
+    Swipe    ${start_x}    ${start_y}    ${offset_x}    ${offset_y}    1000
+
+Swipe Down
+    ${width}=    Get Window Width
+    ${height}=   Get Window Height
+    ${start_x}=      Evaluate    0.5 * ${width}
+    ${start_y}=      Evaluate    0.5 * ${height}    
+    ${offset_y}=     Evaluate    0.25 * ${height}
+    Swipe    ${start_x}    ${start_y}    ${start_x}    ${offset_y}    1000
+
+Select Item On List View
+     [Arguments]     ${tbl_list}     ${item}
+     @{elements}     Get Webelements    ${tbl_list}
+     Click Element    @{elements}[${item}]
+
+Click On Menu
+    [Arguments]     ${mnu}
+    Click Element       ${mnu}
+
+Click On Back Button
+    [Arguments]     ${btn_back}
+    Click Element       ${btn_back}
+
+Click On OK Button
+    [Arguments]     ${btn_ok}
+    Click Element       ${btn_ok}
+
+Alert Popup Is Displayed
+    [Arguments]     ${alert}
+    Wait Until Element Is Visible       ${alert}        timeout=10s
+
+Click On Allow Button
+    [Arguments]     ${btn_allow}
+    Wait Until Element Is Visible        ${btn_allow}
+    Click Element       ${btn_allow}
+
+Accept Alert Popup
+    ${status}   ${value} =      Run Keyword And Ignore Error        Alert Popup Is Displayed    &{alert}[page_alert]
+    Run Keyword If      '${status}' == 'PASS'       Click On Allow Button    &{alert}[btn_allow]
+    Run Keyword Unless  '${status}' == 'PASS'       Wait Until Page Does Not Contain Element    &{alert}[page_alert]
+
+Switch To Webview Context
+    ${default_context}=    Get Current Context
+    @{all_context}=    Get Contexts
+    ${count_list}=    Get Length    ${all_context}
+    ${webview_context}=    Get From List    ${all_context}    ${count_list-1}
+    Switch To Context    ${webview_context}
+
+Switch To Native Context
+     ${default_context}=    Get Current Context
+     @{all_context}=    Get Contexts
+     ${count_list}=    Get Length    ${all_context}
+     ${native_context}=    Get From List    ${all_context}    0
+     Switch To Context    ${native_context}
+
+Page Should Contain Property With Value
+    [Arguments]    ${page_content}
+    Page Should Contain Text    ${page_content}
+
+Click On Go Button
+    [Arguments]     ${btn_go}
+    Wait Until Element Is Visible        ${btn_go}
+    Click Element       ${btn_go}
+
+Swipe Up To Element
+    [Arguments]    ${expected_locator}
+    Wait Until Keyword Succeeds    10x    1s    Run Keywords    Swipe Up    AND    Wait Until Page Contains Element    ${expected_locator}      timeout=5s
+
+Swipe Down To Element
+     [Arguments]    ${expected_locator}
+     Wait Until Keyword Succeeds    10x    3s    Run Keywords    Swipe Down
+     ...    AND    Wait Until Element Is Visible    ${expected_locator}      timeout=2s
+
+Scroll Element To Middle
+     [Arguments]    ${element}
+     Wait Until Keyword Succeeds    10x    1s    Run Keywords    Swipe Down
+     ...    AND    Element Is In Middle Of Screen    ${element}
+
+Swipe Left From Element To Element
+     [Arguments]    ${from_element}    ${expected_element}    
+     Wait Until Element Is Visible    ${from_element}
+     ${element_location}=    Get Element Location    ${from_element}
+     ${element_location}=    Convert To String    ${element_location}
+     @{list_coordinates}=    Get Regexp Matches    ${element_location}    \\d+
+     Wait Until Keyword Succeeds    10x    2s    Run Keywords    Swipe    ${list_coordinates}[0]    ${list_coordinates}[1]    0    ${list_coordinates}[1]  
+     ...    AND    Wait Until Element Is Visible    ${expected_element}      timeout=1s
+
+Wait Element Is Visible
+    [Arguments]    ${locator}    ${timeout}=${None}
+    Wait Until Element Is Visible    ${locator}    ${timeout}
+        
+Element Is In Middle Of Screen
+    [Arguments]    ${element}    ${variance}=300
+    ${screen_height}=    Get Window Height
+    ${element_location}=    Get Element Location    ${element}
+    ${element_location}=    Convert To String    ${element_location}
+    @{list_coordinates}=    Get Regexp Matches    ${element_location}    \\d+
+    ${middle_point}=    Evaluate    ${screen_height} * 0.5
+    ${element_position}=    Evaluate    abs(${list_coordinates}[1] - ${middle_point})
+    Should Be True    ${element_position} < 300               
+
+Wait Until Element Is Enabled
+    [Arguments]    ${element}    ${timeout}=30
+    ${interval}=    Evaluate    ${timeout} / 10    
+    Wait Until Keyword Succeeds    10x    ${${interval}}s    Element Should Be Enabled    ${element}
+    Element Should Be Enabled    ${element}
+
+Click Visible Element
+    [Arguments]    ${element}    ${timeout}=${None}
+    Click Element    ${element}
+        
+Wait Element Disappear
+    [Arguments]    ${element}    ${timeout}=${None}
+    Wait Until Page Does Not Contain Element    ${element}    ${timeout}  

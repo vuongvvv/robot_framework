@@ -1,0 +1,29 @@
+requests==2.23.0
+pymysql==0.9.3
+robotframework==3.2.1
+robotframework-requests==0.7.0
+robotframework-jsonlibrary==0.3.1
+robotframework-databaselibrary==1.2.4
+robotframework-seleniumlibrary==4.4.0
+robotframework-httplibrary==0.4.2
+selenium==3.141.0
+DateTime==4.3
+pyyaml==5.3.1
+mysql-connector==2.2.9
+robotframework-jsonvalidator==1.0.1
+boto3==1.10.41
+botocore==1.13.41
+docutils==0.15.2
+futures==3.1.1
+jmespath==0.9.4
+python-dateutil==2.8.0
+s3transfer==0.2.1
+six==1.13.0
+urllib3==1.25.7
+mysql-connector-python
+
+# angular-js support library, built on top of SeleniumLibrary - https://pypi.org/project/robotframework-angularjs/
+robotframework-angularjs
+
+# https://pypi.org/project/robotframework-seleniumtestability/
+robotframework-seleniumtestability

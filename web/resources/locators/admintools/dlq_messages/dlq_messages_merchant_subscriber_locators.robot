@@ -1,0 +1,2 @@
+*** Variables ***
+${dlqTopicName}                     name=searchTopicName

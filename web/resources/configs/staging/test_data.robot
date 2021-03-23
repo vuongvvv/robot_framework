@@ -1,0 +1,2 @@
+*** Variables ***
+${WE_PLATFORM_CONTENT_ID}    5d27fe727303e90001157125

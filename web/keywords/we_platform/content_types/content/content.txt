@@ -1,0 +1,48 @@
+# This is heading 1
+## This is heading 2
+### This is heading 3
+#### This is heading 4
+###### This is heading 6
+[![Logo](https://www.matichon.co.th/wp-content/uploads/2017/02/โลโก้-ทรูวิชั่นส์.jpg)](https://alpha-platform.weomni-test.com)
+asterisks or underscores.
+​
+**bold** or __underscores__.
+​
+**bold and underscores**.
+​
+Strikethrough  ~~line.~~
+- [x] Setup NGINX
+- [ ] Setup Database
+- [x] Done!
+| No | Name |
+| --- | --- |
+| 1 | John Doe |
+| 2 | Jane Doe |
+| 3 | Chuck Norris |
+Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+[Weplatform](https://alpha-platform.weomni-test.com)
+[![Peppa Pig](https://www.birminghambotanicalgardens.org.uk/wp-content/uploads/2019/02/Peppa-Pig-Banner-Images-163x122-JUNE-2019.113336-500x374.jpg)](https://www.youtube.com/watch?v=UqDJO_HIoNM=YOUTUBE_VIDEO_ID_HERE)
+
+Or
+
+<a href="https://www.youtube.com/watch?v=UqDJO_HIoNM=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"><img src="https://www.birminghambotanicalgardens.org.uk/wp-content/uploads/2019/02/Peppa-Pig-Banner-Images-163x122-JUNE-2019.113336-500x374.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;

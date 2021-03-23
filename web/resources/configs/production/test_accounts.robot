@@ -1,0 +1,9 @@
+*** Variables ***
+${AUDIT_WEB_SALE_USERNAME}    saletest2
+${AUDIT_WEB_SALE_PASSWORD}    123456
+${AUDIT_WEB_SENDIT_USERNAME}    chanajun.sendit
+${AUDIT_WEB_SENDIT_PASSWORD}    sendit
+${AUDIT_WEB_FRAUD_USERNAME}    nattha
+${AUDIT_WEB_FRAUD_PASSWORD}    1234567890
+${VM_CMS_USER}        tanapat.sir@ascendcorp.com
+${VM_CMS_PASSWORD}    12345678

@@ -1,0 +1,2 @@
+*** Variables ***
+${WE_PLATFORM_PROJECT_ID}   5f3cb035291a57000187e21c
