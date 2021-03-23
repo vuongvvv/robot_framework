@@ -1,0 +1,13 @@
+{
+  "customerId": "5c778c0cffc9c90001fe0336",
+  "items": [
+    {
+      "name": "ipad",
+      "price": 100,
+      "quantity": 30,
+      "sku": "sku_003"
+    }
+  ],
+  "merchantId": "merchant_001",
+  "total": 2000
+}

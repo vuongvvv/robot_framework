@@ -1,0 +1,26 @@
+{
+  "campaignCode":"TP00001",
+  "channel":"TSM",
+  "txRef":1562560360923,
+  "attribute":{
+    "merchantId":"1111111",
+    "merchantName":"KFC",
+    "action":"purchase",
+    "sku":"KFC111"
+  },
+  "cart":{
+    "items":[
+      {
+        "name":"A001",
+        "sku":"A001",
+        "amount":150,
+        "price":100,
+        "tags":[
+          "Food"
+        ]
+      }
+    ]
+  },
+  "startDate":null,
+  "endDate":null
+}

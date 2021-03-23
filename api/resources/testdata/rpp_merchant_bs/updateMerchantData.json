@@ -1,0 +1,299 @@
+{
+    "category_id": "5948d629e1382324745d0e38",
+    "subcategory_id": "59ae2e85e9da8f7b58435157",
+    "mcc_code": "5977",
+    "merchant_name": {
+      "th": "ทดสอบ_ร้าน555",
+      "en": "Test_Shop555"
+    },
+    "interest": true,
+    "note": "",
+    "prominent_point": "สาขาใหญ่",
+    "service_type": 1,
+    "device_type": 1,
+    "shop_type": 1,
+    "use_true_privilege": true,
+    "true_privilege_id": [
+      "3"
+    ],
+    "truemoveh_no": "66-864403645",
+    "trueonline_no": "66-864403645",
+    "truevision_no": "66-864403645",
+    "truevision_type": "",
+    "CAtv_id": "",
+    "use_ecom": true,
+    "store": {
+      "address": {
+        "address_id": 34901,
+        "address": "608 ซ.ภานุรัวษี ถ.ทรงวาด",
+        "province_name": "กรุงเทพมหานคร",
+        "province_id": 1,
+        "district_name": "สัมพันธวงศ์",
+        "district_id": 13,
+        "subdistrict_name": "ตลาดน้อย",
+        "subdistrict_id": 98,
+        "post_code": "10100"
+      },
+      "tel": "",
+      "mobile": "66-600009003",
+      "email": "o2o.qatesting@gmail.com"
+    },
+    "social": {
+      "web": "",
+      "line": "dawmhr",
+      "facebook": "https://www.facebook.com/",
+      "twitter": "",
+      "instagram": ""
+    },
+    "store_image": [
+      "5a40b28ae9da8f698c2ac422",
+      "5a40b28be9da8f698c2ac423",
+      "5a40b28be9da8f698c2ac424"
+    ],
+    "logo_image": [
+      "5a40b29be9da8f67872dec46",
+      "5a40b29ce9da8f67872dec47"
+    ],
+    "menu_image": [
+      "5a40b2a5e9da8f65d2222466",
+      "5a40b2b2e9da8f6a74398152"
+    ],
+    "merchant_type": "individual",
+    "merchant_detail": {
+      "title": {
+        "en": "",
+        "other_en": "",
+        "th": "3",
+        "other_th": ""
+      },
+      "firstname": {
+        "th": "เทสแอสเซนด์",
+        "en": "Testascend"
+      },
+      "lastname": {
+        "th": "โอนลี่",
+        "en": "Only"
+      },
+      "card_no": "1341100246521",
+      "back_card_no": "jc1234567890",
+      "card_expired": "2018-09-21",
+      "sex": "female",
+      "birthdate": "1994-06-26",
+      "occupation": "0001",
+      "address": {
+        "address_id": 34903,
+        "address": "57/197 สินทวีท่าข้าม4 ซ.ภานุรังษี",
+        "province_name": "กรุงเทพมหานคร",
+        "province_id": 1,
+        "district_name": "บางขุนเทียน",
+        "district_id": 21,
+        "subdistrict_name": "ท่าข้าม",
+        "subdistrict_id": 147,
+        "post_code": "10150"
+      },
+      "tel": "",
+      "mobile": "66-600009003",
+      "email": "o2o.qatesting@gmail.com",
+      "documents": {
+        "commercial_registration": [],
+        "book_bank": [
+          "5a40b69ce9da8f6b1d158a84"
+        ],
+        "thai_license": [
+          "5a40b690e9da8f6b3f68b4b2"
+        ],
+        "home_license": [],
+        "certificate20": [],
+        "changename_document": []
+      }
+    },
+    "contacts": {
+      "title": "3",
+      "title_other": "",
+      "firstname": "ปวีณา",
+      "lastname": "ลือขจร",
+      "tel": "",
+      "mobile": "66-600009003",
+      "email": "o2o.qatesting@gmail.com"
+    },
+    "trueyou": {
+      "start_privilage": "2017-01-25",
+      "end_privilage": "2018-12-25",
+      "advertise": {
+        "store_size": "S",
+        "window_sticker_a6": 1,
+        "tent_card_a5": 4,
+        "poster_a1": 0,
+        "standee": 0,
+        "address": {
+          "address_id": 34905,
+          "address": "608 ซ.ภานุรัวษี ถ.ทรงวาด",
+          "province_name": "กรุงเทพมหานคร",
+          "province_id": 1,
+          "district_name": "สัมพันธวงศ์",
+          "district_id": 13,
+          "subdistrict_name": "ตลาดน้อย",
+          "subdistrict_id": 98,
+          "post_code": "10100"
+        },
+        "tel": "",
+        "mobile": "66-600009003",
+        "email": "o2o.qatesting@gmail.com",
+        "contact_name": "ปวีณา ลือขจร",
+        "contact_no": "084-680-8948",
+        "additional": ""
+      },
+      "merchant_id": 20798,
+      "status": "WAITING",
+      "updated_date": "2018-06-04 16:22:29",
+      "privilege_id": 4319,
+      "truecard": {
+        "group_id": 1,
+        "term": "1.แสดงรหัสก่อนรับสิทธิ์\n2.สิทธิพิเศษนี้สามารถใช้ได้ในช่วงวันที่กำหนดเท่านั้น\n3.สงวนสิทธิ์ในการเปลี่ยนแปลงเงื่อนไข โดยไม่ต้องแจ้งล่วงหน้า และไม่สามารถใช้ร่วมกับรายการส่งเสริมการขาย หรือส่วนลดอื่นๆได้\n4.สิทธิพิเศษนี้ไม่สามารถเปลี่ยนแปลงเป็นเงินสดได้",
+        "privileges": [
+          {
+            "id": 1,
+            "name": "ส่วนลด 10%",
+            "offer": "เทส"
+          }
+        ]
+      },
+      "redcard": {
+        "group_id": 2,
+        "term": "1.แสดงรหัสก่อนรับสิทธิ์\n2.สิทธิพิเศษนี้สามารถใช้ได้ในช่วงวันที่กำหนดเท่านั้น\n3.สงวนสิทธิ์ในการเปลี่ยนแปลงเงื่อนไข โดยไม่ต้องแจ้งล่วงหน้า และไม่สามารถใช้ร่วมกับรายการส่งเสริมการขาย หรือส่วนลดอื่นๆได้\n4.สิทธิพิเศษนี้ไม่สามารถเปลี่ยนแปลงเป็นเงินสดได้",
+        "privileges": [
+          {
+            "id": 6,
+            "name": "ส่วนลด 15%",
+            "offer": "สิบห้"
+          },
+          {
+            "id": 7,
+            "name": "ส่วนลด 50%",
+            "offer": "ห้าสิบ"
+          }
+        ]
+      },
+      "blackcard": {
+        "group_id": 3,
+        "term": "1.แสดงรหัสก่อนรับสิทธิ์\n2.สิทธิพิเศษนี้สามารถใช้ได้ในช่วงวันที่กำหนดเท่านั้น\n3.สงวนสิทธิ์ในการเปลี่ยนแปลงเงื่อนไข โดยไม่ต้องแจ้งล่วงหน้า และไม่สามารถใช้ร่วมกับรายการส่งเสริมการขาย หรือส่วนลดอื่นๆได้\n4.สิทธิพิเศษนี้ไม่สามารถเปลี่ยนแปลงเป็นเงินสดได้",
+        "privileges": [
+          {
+            "id": 11,
+            "name": "ส่วนลด 15%",
+            "offer": "สิบห้"
+          },
+          {
+            "id": 12,
+            "name": "ส่วนลด 50%",
+            "offer": "ห้าสิบ"
+          }
+        ]
+      }
+    },
+    "tmn": {
+      "bank": {
+        "code": "SCB",
+        "branch": "ตึกรัชดา",
+        "type": "current",
+        "name": "เทส เทส",
+        "no": "2885684587"
+      },
+      "channel_cash": {
+        "qr": 0,
+        "pos": 0,
+        "edc": 0
+      },
+      "type_cash": {
+        "wallet": true
+      },
+      "tax": {
+        "title": "3",
+        "title_other": "",
+        "firstname": "ปวีณา",
+        "lastname": "ลือขจร",
+        "headquarter": true,
+        "branch_name": "",
+        "tax_no": "1341100246521",
+        "address": {
+          "address_id": 34907,
+          "address": "57/197 สินทวีท่าข้าม4 ซ.ภานุรังษี",
+          "province_name": "กรุงเทพมหานคร",
+          "province_id": 1,
+          "district_name": "บางขุนเทียน",
+          "district_id": 21,
+          "subdistrict_name": "ท่าข้าม",
+          "subdistrict_id": 147,
+          "post_code": "10150"
+        },
+        "tel": "",
+        "mobile": "66-600009003",
+        "email": "o2o.qatesting@gmail.com",
+        "withholding_tax": false,
+        "is_vat20_registration": false
+      },
+      "mdr_rate": 0,
+      "qr_information": {
+        "truewallet_no": "0846808948",
+        "owner_image": [
+          "5a72c34b33f3f5000f32d628"
+        ],
+        "qrcode_url": "https://qrcode.eggdigital.com/genqr-api/source/qrcode/00104_0846808948_040618_1624341528104274.png",
+        "qrcode_url_preview": "https://qrcode.eggdigital.com/genqr-api/source/qrcode/00105_0846808948_040618_1624341528104274.png",
+        "owner_image_path": []
+      },
+      "updated_date": "2018-06-04 16:24:33",
+      "status": "WAITING"
+    },
+    "ecommerce": {
+      "status": "APPROVE",
+      "updated_date": "2018-06-04 16:24:35"
+    },
+    "merchant_id": 14249,
+    "latitude": 13.764534,
+    "longitude": 100.5679036,
+    "sale_id": "594b8875e1382339835438f3",
+    "ref_id": "3f35c9f1ccfd329e73327d866665",
+    "status": "WAITING",
+    "status_send_email": null,
+    "wid": null,
+    "autorization": [
+      {
+        "firstname": {
+          "en": "",
+          "th": "ปวีณา"
+        },
+        "lastname": {
+          "en": "",
+          "th": "ลือขจร"
+        },
+        "signature": [
+          "5a40b716e9da8f6a7f00fa09"
+        ]
+      }
+    ],
+    "witness": [
+      {
+        "firstname": {
+          "en": "",
+          "th": "เทสส"
+        },
+        "lastname": {
+          "en": "",
+          "th": "จ้าา"
+        },
+        "signature": [
+          "5a40b716e9da8f6a7f00fa0a"
+        ]
+      }
+    ],
+    "recomend": {
+      "channel": "APP_AGENT",
+      "region": "BMA9"
+    },
+    "merchant_similar": null,
+    "created_date": "2018-06-04 16:24:35",
+    "updated_date": "2018-06-04 16:24:35",
+    "id": "5b150553e9da8f77192a3248",
+    "revise_by" : "trueyou"
+  }

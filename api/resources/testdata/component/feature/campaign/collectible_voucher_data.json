@@ -1,0 +1,21 @@
+{
+  "collectibleEndDate": "2020-02-19T09:11:23.450Z",
+  "collectibleStartDate": "2019-02-18T09:11:23.450Z",
+  "maxUsePerUser": 1,
+  "name": "Tet_Holiday",
+  "public": false,
+  "redeemableEndDate": "2020-02-20T09:11:23.450Z",
+  "redeemableStartDate": "2019-03-21T09:11:23.450Z",
+  "status": "ACTIVE",
+  "totalCode": 100,
+  "totalUse": 1,
+  "type": "COLLECTIBLE",
+  "codePattern": {
+    "length": 8,
+    "prefix": "TET",
+    "suffix": "VUI",
+    "segmented": true
+  },
+  "consumerId" :"5c778c0cffc9c90001fe0336",
+  "voucherGroup": "TETVUI"
+}

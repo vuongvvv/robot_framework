@@ -1,0 +1,11 @@
+{
+   "campaignCode":"laEZ81aSK1aI",
+   "channel":"tsm",
+   "txRef":1558685230954,
+   "attribute":{
+      "customerId":"000102",
+      "action":"purchase"
+   },
+   "startDate":null,
+   "endDate":null
+}

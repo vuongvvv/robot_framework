@@ -1,0 +1,202 @@
+{
+  "type": "QUANTITY",
+  "name": "Black Friday",
+  "rules": [
+    {
+      "onTopPromotionPrice": true,
+      "trigger": {
+       "option": "AND",
+       "exclusions": [
+         {
+           "level": "MERCHANT",
+           "items": [
+             "sku004",
+             "sku005",
+             "sku006"
+           ]
+         }
+       ],
+       "criteria": [
+         {
+           "level": "MERCHANT",
+           "type": "PURCHASE",
+           "itemData": {
+             "option": "OR",
+             "items": [
+               {
+                 "id": "sku001",
+                 "quantity": 2
+               },
+               {
+                 "id": "sku002",
+                 "quantity": 2
+               },
+               {
+                 "id": "sku003",
+                 "quantity": 2
+               }
+             ]
+           }
+         }
+       ]
+     },
+
+      "benefit": {
+       "option": "AND",
+       "data": [
+         {
+           "type": "FREE_ITEM",
+           "level": "SKU",
+           "itemData": {
+             "option": "OR",
+             "items": [
+               {
+                 "id": "sku200",
+                 "quantity": 1
+               },
+               {
+                 "id": "sku300",
+                 "quantity": 1
+               }
+             ]
+           },
+           "amount": 10,
+           "discountType": "SKU"
+         }
+       ]
+     },
+      "isFeatured": true
+    },
+    {
+      "onTopPromotionPrice": true,
+      "trigger": {
+        "option": "AND",
+        "exclusions": [],
+        "criteria": [
+          {
+            "type": "VOUCHER",
+            "level": "SKU",
+            "itemData": {
+              "option": "OR",
+              "items": [
+                {
+                  "id": "sku_002",
+                  "quantity": 20
+                }
+              ]
+            },
+            "minAmount": 1000,
+            "voucherGroup": "TETVUI"
+          }
+        ]
+      },
+      "benefit": {
+        "data": [
+          {
+            "type": "FREE_ITEM",
+            "level": "SKU",
+            "itemData": {
+              "option": "OR",
+              "items": [
+                {
+                  "id": "sku_003",
+                  "quantity": 1
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "isFeatured": true
+    },
+    {
+      "onTopPromotionPrice": true,
+      "trigger": {
+        "option": "AND",
+        "exclusions": [],
+        "criteria": [
+          {
+            "type": "COUPON",
+            "level": "CATEGORY",
+            "itemData": {
+              "option": "OR",
+              "items": [
+                {
+                  "id": "sku_003",
+                  "quantity": 30
+                }
+              ]
+            },
+            "minAmount": 1000,
+            "couponGroup": "TETVUI"
+          }
+        ]
+      },
+      "benefit": {
+        "option": "OR",
+        "data": [
+          {
+            "type": "FREE_ITEM",
+            "level": "SKU",
+            "itemData": {
+              "option": "OR",
+              "items": [
+                {
+                  "id": "sku_003",
+                  "quantity": 2
+                }
+              ]
+            }
+          },
+          {
+            "type": "DISCOUNT",
+            "discountType": "PERCENT",
+            "amount": 50,
+            "itemData": {
+              "items": [
+                {
+                  "id": "sku_010",
+                  "quantity": 1
+                }
+              ]
+            },
+            "level": "SKU"
+          }
+        ]
+      },
+      "isFeatured": true
+    }
+  ],
+  "startDate": "2059-02-15T00:00:00Z",
+  "endDate": "2059-03-15T00:00:00Z",
+  "status": "ENABLE",
+  "maximumUsePerUser": 10,
+  "platform": "WM",
+  "participants": [
+     {
+
+        "merchantId": "merchant_001",
+        "outletId": "outlet_001",
+        "terminalId": "terminal_001"
+     },
+    {
+      "merchantId": "merchant_002",
+      "outletId": "outlet_002",
+      "terminalId": "terminal_002"
+    }
+   ],
+  "financing": [
+    {
+      "type": "SUBSIDY",
+      "name": "TRUE_YOU"
+    },
+    {
+       "type": "SUBSIDY",
+       "name": "WE_LOVE_SHOPPING"
+     },
+     {
+       "type": "MERCHANT",
+       "name": "merchant_001"
+     }
+  ]
+}

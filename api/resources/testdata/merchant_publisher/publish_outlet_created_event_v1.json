@@ -1,0 +1,23 @@
+{
+    "id": 94466,
+    "merchantId": "111131",
+    "merchantBrandId": "0027645",
+    "createBy": "rpp_mtransaction",
+    "createDate": "2019-09-20T10:51:04.419",
+    "modifyBy": "rpp_mtransaction",
+    "modifyDate": "2019-09-20T10:51:04.419",
+    "tmnOutletId": "",
+    "outletId": "00023",
+    "outletNameTh": "1001-5",
+    "outletNameEn": "1001-5",
+    "outletDetail": "outletDetail_test",
+    "contactFirstName": "กร",
+    "contactLastName": "สุชาติ",
+    "contactMobile": "66600009009",
+    "contactTel": "66600009009",
+    "contactEmail": "hermes.aavn@gmail.com",
+    "headQuarter": false,
+    "terminalTotal": null,
+    "trueyouId": "111002762600001",
+    "status": "APPROVE"
+}

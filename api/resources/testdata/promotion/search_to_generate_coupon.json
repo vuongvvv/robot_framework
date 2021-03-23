@@ -1,0 +1,7 @@
+{
+  "channel": "tsm",
+  "attribute": {
+    "action": "purchase",
+    "customerId": "00001"
+  }
+}

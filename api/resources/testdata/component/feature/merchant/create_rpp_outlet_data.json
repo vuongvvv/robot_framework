@@ -1,0 +1,50 @@
+{
+    "outlets": [
+        {
+            "outletId": "000009999999",
+            "tmnOutletId": null,
+            "trueyouId": null,
+            "outletNameTh": "Auto สาขา 1",
+            "outletNameEn": "Auto Esplanade Ratchadapisek",
+            "outletDetail": "Auto อาหารอร่อย",
+            "headQuarter": false,
+            "status": "WAITING",
+            "tmnStatus": "WAITING",
+            "trueyouStatus": "WAITING",
+            "registerChannel": "app_sale_agent",
+            "franchisee": true,
+            "saleId": "1234",
+            "addresses": [
+                {
+                    "provinceId": 1,
+                    "districtId": 26,
+                    "subdistrictId": 8933,
+                    "address": "Ratchadaphisek Rd",
+                    "road": "Ratchadaphisek",
+                    "postCode": "10400",
+                    "latitude": "555555555",
+                    "longtitude": "-0.12775829999998223",
+                    "addressType": "store"
+                }
+            ],
+            "contactPersons": [
+                {
+                    "titleId": 2,
+                    "titleOtherName": "",
+                    "firstNameTh": "ช่ือแป๋ม",
+                    "lastNameTh": "นามสกุลแป๋ม",
+                    "firstNameEn": "PAMPAM",
+                    "lastNameEn": "PAMPAM",
+                    "phoneNo": "02-899-2188",
+                    "mobileNo": "66-289921880",
+                    "email": "pam@ascendcorp.net",
+                    "thaiId": "1100800903436",
+                    "passportNo": "AB1100800",
+                    "birthDate": null,
+                    "gender": "female",
+                    "occupation": "QA_1_1"
+                }
+            ]
+        }
+    ]
+}

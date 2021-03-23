@@ -1,0 +1,7 @@
+*** Variables ***
+${ROLE_ADMIN}    admin
+${ROLE_ADMIN_PASSWORD}    XAaq24aI3hLZ9L
+
+#TRUE TOWN
+${TRUE_TOWN_USERNAME}    66800311206
+${TRUE_TOWN_PASSWORD}    Passw0rd

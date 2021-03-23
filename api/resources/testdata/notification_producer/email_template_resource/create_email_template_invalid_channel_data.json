@@ -1,0 +1,11 @@
+{
+  "action": "TMN_REGISTER1",
+  "title": "test_AT",
+  "status": "INACTIVE",
+  "template": "<html>This is body</html>",
+  "html": true,
+  "sender": "test@ascendcorp.com",
+  "cc": "test1@ascendcorp.com",
+  "bcc": "test2@ascendcorp.com",
+  "registerChannel": "invalid_registration"
+}

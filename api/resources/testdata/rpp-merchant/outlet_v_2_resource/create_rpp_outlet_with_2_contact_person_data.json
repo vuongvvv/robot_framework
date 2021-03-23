@@ -1,0 +1,64 @@
+{
+    "outlets": [
+        {
+            "outletId": null,
+            "tmnOutletId": null,
+            "trueyouId": null,
+            "outletNameTh": "John สาขา 1 with 2 contacts",
+            "outletNameEn": "AT Test JW Outlet",
+            "outletDetail": "John อาหารอร่อย",
+            "headQuarter": false,
+            "registerChannel": "app_sale_agent",
+            "franchisee": true,
+            "merchantId": 104905,
+            "saleId": "1234",
+            "addresses": [
+                {
+                    "provinceId": 1,
+                    "districtId": 26,
+                    "subdistrictId": 8933,
+                    "address": "Ratchadaphisek Rd",
+                    "road": "Ratchadaphisek",
+                    "postCode": "10400",
+                    "latitude": "555555555",
+                    "longtitude": "-0.12775829999998223",
+                    "addressType": "store"
+                }
+            ],
+            "contactPersons": [
+                {
+                    "titleId": 2,
+                    "titleOtherName": "songlong",
+                    "firstNameTh": "ช่ือแช่ือช่ช่ือแช่ือแือแแป๋ม",
+                    "lastNameTh": "นามสกุช่ือแช่ือแช่ือแช่ือแลแป๋ม",
+                    "firstNameEn": "PAMPAMKkkkk",
+                    "lastNameEn": "PAMPAMK",
+                    "phoneNo": "02-899-2177",
+                    "mobileNo": "66-864403645",
+                    "email": "pam1234@ascendcorp.net",
+                    "thaiId": "1100800903437",
+                    "passportNo": "AB1100800",
+                    "birthDate": "1992-07-08",
+                    "gender": "female",
+                    "occupation": "QA_1_1"
+                },
+                {
+                    "titleId": 3,
+                    "titleOtherName": "songviet",
+                    "firstNameTh": "ช่ือแป๋ม",
+                    "lastNameTh": "นามสกุลแป๋ม",
+                    "firstNameEn": "PAMPAMKbbbbb",
+                    "lastNameEn": "PAMPAMK",
+                    "phoneNo": "02-899-2188",
+                    "mobileNo": "66-864403645",
+                    "email": "pam@ascendcorp.net",
+                    "thaiId": "1100800903436",
+                    "passportNo": "AB1100800",
+                    "birthDate": "1992-07-09",
+                    "gender": "female",
+                    "occupation": "QA_1_1"
+                }
+            ]
+        }
+    ]
+}

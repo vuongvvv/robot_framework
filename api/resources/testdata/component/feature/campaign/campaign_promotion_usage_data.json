@@ -1,0 +1,16 @@
+{
+  "campaignId": "cb00001",
+  "customerId": "C001",
+  "merchantId": "merchant_001",
+  "usageDate": "2059-01-04T07:47:41.287Z",
+  "channel": "TSM",
+  "orderId": "WL122",
+  "usageData":
+   {
+     "usageType": "PURCHASE",
+     "spentAmount": 50,
+     "currency": "bath",
+     "quantity": 1,
+     "skus":["sku01", "sku02"]
+   }
+}

@@ -1,0 +1,97 @@
+{
+  "name": "FREE GIFT 2019",
+  "description": "FREE GIFT 2019",
+  "startDate": "1998-05-08T15:53:00Z",
+  "refCode": "TP00001",
+  "status": "ENABLE",
+  "quotas": [
+    {
+      "value": "200",
+      "key": "${campaignCode}",
+      "valueField": "amount"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Rule1",
+      "when": [
+        {
+          "match": "ALL",
+          "conditions": [
+            {
+              "type": "cartItem",
+              "attribute": "sku",
+              "op": "eq",
+              "value": "A001",
+              "valueType": "STRING"
+            }
+          ]
+        }
+      ],
+      "thenOperator": "OR",
+      "then": [
+        {
+          "data": [
+            {
+              "type": "custom",
+              "attribute": "B001",
+              "value": "1",
+              "valueType": "STRING"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "type": "custom",
+              "attribute": "B002",
+              "value": "1",
+              "valueType": "STRING"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "type": "custom",
+              "attribute": "B003",
+              "value": "1",
+              "valueType": "STRING"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rule2",
+      "when": [
+        {
+          "match": "ALL",
+          "conditions": [
+            {
+              "type": "cartItem",
+              "attribute": "sku",
+              "op": "eq",
+              "value": "A002",
+              "valueType": "STRING"
+            }
+          ]
+        }
+      ],
+      "thenOperator": "AND",
+      "then": [
+        {
+          "data": [
+            {
+              "type": "custom",
+              "attribute": "C001",
+              "value": "1",
+              "valueType": "STRING"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "version": 0
+}

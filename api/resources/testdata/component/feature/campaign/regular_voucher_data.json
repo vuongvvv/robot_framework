@@ -1,0 +1,16 @@
+{
+  "maxUsePerUser": 1,
+  "name": "Tet_Holiday",
+  "public": false,
+  "status": "ACTIVE",
+  "totalCode": 100,
+  "totalUse": 1,
+  "type": "REGULAR",
+  "codePattern": {
+    "length": 8,
+    "prefix": "TET-",
+    "suffix": "-VUI"
+   },
+  "consumerId" :"5c778c0cffc9c90001fe0336",
+  "voucherGroup": "TETVUI"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "FREE_GIFT 2019",
+  "description": "FREE_GIFT 2019",
+  "refCode": "TP00001",
+  "channel": "TSM",
+  "status": "ENABLE",
+  "startDate":"1998-05-08T15:53:00Z",
+  "quotas": [
+    {
+      "id": null,
+      "key": "${campaignCode}",
+      "value": 200,
+      "description": null,
+      "valueField": "amount",
+      "campaign": null,
+      "projectId": null
+    }
+  ],
+  "rules": [
+    {
+      "name": "Buy chicken pop free pepsi",
+      "when": [
+        {
+          "match": "ALL",
+          "conditions": [
+            {"attribute": "sku", "type":"cartItem", "op":"EQ", "value":"A001", "note":""}
+          ]
+        }
+      ],
+      "then": [
+        {
+          "action": "FREE_GIFT",
+          "data": [
+            {"attribute": "sku","value":"B002","note":""},
+            {"attribute": "amount","value":"${cartItemSkuA001Amount}", "resolveAction":"true","note":""}
+          ]
+        }
+      ]
+    }
+  ]
+}

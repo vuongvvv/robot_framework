@@ -1,0 +1,52 @@
+{
+   "name":"gencoupon",
+   "description":"generate coupon",
+   "startDate":"2019-03-30T17:00:00.000Z",
+   "endDate":"2030-12-31T16:59:00.000Z",
+   "refCode":"GEN_COUPON_2019",
+   "status":"ENABLE",
+   "rules":[
+      {
+         "name": "Gencoupon",
+         "when": [
+        {
+          "match": "ALL",
+          "conditions": [
+            {
+              "type": "custom",
+              "attribute": "action",
+              "op": "eq",
+              "value": "purchase",
+              "note": null,
+              "resolveAction": false
+            }
+          ]
+        }
+      ],
+      "then": [
+        {
+          "action": "GEN_COUPON",
+          "internalAction": true,
+          "data": [
+            {
+              "type": null,
+              "attribute": "CAMPAIGN_CODE",
+              "op": null,
+              "value": "usecoupon4",
+              "note": null,
+              "resolveAction": false
+            },
+            {
+              "type": null,
+              "attribute": "VALID_FOR",
+              "op": null,
+              "value": "${customerId}",
+              "note": null,
+              "resolveAction": false
+            }
+          ]
+        }
+      ]
+      }
+   ]
+}

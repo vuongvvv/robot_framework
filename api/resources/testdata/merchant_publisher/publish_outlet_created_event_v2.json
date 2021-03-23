@@ -1,0 +1,63 @@
+{
+  "addresses": [
+      {
+        "addressId": 56715,
+        "provinceId": 1,
+        "districtId": 1,
+        "subdistrictId": 6,
+        "province": "กรุงเทพ",
+        "district": "พระนคร",
+        "subdistrict": "เสาชิงช้า",
+        "address": "TEST New Multi Outlet",
+        "road": "Ascesnd",
+        "postCode": "10250",
+        "latitude": "53.286518",
+        "longtitude": "-6.416771",
+        "addressType": "store",
+        "contentType": "outlet",
+        "contentId": null
+      }
+    ],
+    "contactPersons": [
+      {
+        "id": 105941,
+        "titleId": 2,
+        "titleOtherName": null,
+        "firstNameTh": "แอสเซนด์",
+        "lastNameTh": "ออนลี่",
+        "firstNameEn": "Ascend",
+        "lastNameEn": "Only",
+        "refType": "outlet",
+        "refId": 92719,
+        "phoneNo": "020000001",
+        "mobileNo": "66-600009003",
+        "email": "o2o_robot_automation@gmail.com",
+        "thaiId": "3100602988644",
+        "passportNo": null,
+        "birthDate": "1988-10-10",
+        "gender": "Female",
+        "occupation": "Testing"
+      }
+    ],
+  "createBy": "user",
+  "createDate": "2019-08-06T15:39:01",
+  "franchisee": true,
+  "headQuarter": true,
+  "id": 94466,
+  "merchantBrandId": "0027645",
+  "merchantId": "111131",
+  "modifyBy": "merchant_client",
+  "modifyDate": "2019-08-06T15:40",
+  "outletDetail": "IRIS_CREATE_V2_Detail",
+  "outletId": "00023",
+  "outletNameEn": "IRIS_CREATE_V2_NAME_EN",
+  "outletNameTh": "IRIS_CREATE_V2_NAME_TH",
+  "registerChannel": "app_sale_agent",
+  "saleId": "sale",
+  "status": "DRAFT",
+  "tmnOutletId": null,
+  "tmnStatus": "WAITING",
+  "trueyouId": null,
+  "trueyouRefId": null,
+  "trueyouStatus": ""
+}

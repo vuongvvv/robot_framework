@@ -1,0 +1,55 @@
+*** Variables ***
+${GATEWAY_SESSION}    GATEWAY_SESSION
+${API_HOST}           https://gateway.weomni-test.com
+${SDK_SESSION}    SDK_SESSION
+${SDK_HOST}           https://sdk-auth.trueid-dev.net
+${TRUE_YOU_SESSION}    TRUE_YOU_SESSION
+${TRUE_YOU_HOST}           http://172.18.124.30:8080
+#Client_Id : robot_automation_client
+${AUTHORIZATION_KEY}    Basic cm9ib3RhdXRvbWF0aW9uY2xpZW50OnJvYm90YXV0b21hdGlvbmNsaWVudA==
+#Client_Id : trueyouapp
+${TRUEYOU_AUTHORIZATION_KEY}    Basic dHJ1ZXlvdWFwcDp8YXNkNis+Z29wRDZSUHpS
+#Client_Id : edc
+${EDC_AUTHORIZATION_KEY}    Basic ZWRjX2VzdGFtcDoyfFROTm92YCV2eC08WEps
+#Client_Id : admintools
+${ADMIN_TOOLS_AUTHORIZATION_KEY}    Basic YWRtaW50b29sczpkZWNiX0Utamh5YUw4WmVE
+${APIGEE_SESSION}    APIGEE_SESSION
+${APIGEE_HOST}           https://api.weomni-test.com
+${WEOMNI_AUTHORIZATION_KEY}=    Basic QVZqdTdXVDVFTVZodmhvYVUwZ0ZuZ0JMTGlWTTU1YWw6TkIyYThwUlBja1B0MFBVTQ==
+${RPP_HOST}    https://staging-am-rpp.eggdigital.com
+${RPP_SESSION}     RPP_SESSION
+${RPP_AUTHORIZATION_KEY}=    Basic dGVzdDoxMjM0NTY=
+${RPP_PAYMENT_AUTHORIZATION_KEY}    Basic cnBwYXBpZ2VlOkY2bmF6RGhRY1llQm5r
+# List of the response code
+${SUCCESS_CODE}               200
+${CREATED_CODE}               201
+${ACCEPTED_CODE}              202
+${BAD_REQUEST_CODE}           400
+${INTERNAL_SERVER_CODE}       500
+${NOT_FOUND_CODE}             404
+${UNAUTHORIZED}               401
+${FORBIDDEN_CODE}             403
+${METHOD_NOT_ALLOWED}         405
+${UNSUPPORTED_MEDIA_TYPE}     415
+${SERVICE_UNAVAILABLE}        503
+${NO_CONTENT_CODE}    204
+
+${RPP_GATEWAY_SESSION}        RPP_GATEWAY_SESSION
+${RPP_GATEWAY_HOST}           https://rpp.weomni-test.com
+${RPP_GATEWAY_HOST_FOR_TEST_AUDIT_WEB}    https://alpha-rpp.weomni-test.com
+${RPP_GATEWAY_AUTHORIZATION_KEY}         cm9ib3RfYXV0b21hdGU6YXV0b21hdGVfUGFzc3dvcmQ=
+## Project For CMS
+${WESHOP_PROJECT_ID}    5d52640940de8200019a70e6     #Using GET /api/projects in project-resource
+${WEPAYMENT_PROJECT_ID}    5f6d95f41c402000014ac338
+
+#EGG DIGITAL
+${EGG_DIGITAL_HOST}    https://ppro-smsweb.eggdigital.com/
+${EGG_DIGITAL_SESSION}    EGG_DIGITAL_SESSION
+${EGG_DIGITAL_PROJECT_ID}    199
+
+#Permanent access token valid 1 year - 10 Mar 2021
+${ADMIN_USER_ACCESS_TOKEN}    eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiI2NjAwMDAwMDAwMyIsInNjb3BlIjpbInNtcy5yZWFkIiwic2lnbmluLmxpbmUiLCJiaWZyb3N0LmRldiIsInB1c2gtbm90aWZpY2F0aW9uLmNvbmZpZ3VyYXRpb24ud3JpdGUiLCJ3ZXNob3Aub3JkZXIuY29uZmlybSIsIm1lcmNoYW50VHguY3JlYXRlIiwid2VzaG9wLm9yZGVyLioiLCJjYW1wYWlnbi51c2FnZS5jcmVhdGUiLCJiYXRjaF9wcm9jZXNzb3IiLCJub3RpZmljYXRpb24ucHVzaC5jcmVhdGUiLCJwdXNoLW5vdGlmaWNhdGlvbi5jb25maWd1cmF0aW9uLnJlYWQiLCJtZXJjaGFudC5tZXJjaGFudC5hdXRvYmluZCIsImNhbXBhaWduLnByb21vdGlvbi5jcmVhdGUiLCJicmFuZC53cml0ZSIsImNhbXBhaWduLnByb21vdGlvbi51cGRhdGUiLCJ1YWEuY2xpZW50LWNvbmZpZy53cml0ZSIsInNpZ25pbi5zbXMtb3RwIiwiYWNjb3VudC51cGRhdGUiLCJub3RpZmljYXRpb24ucHVzaC5yZWdpc3RlciIsInVhYS5jb25maWcud3JpdGUiLCJzbXMuY3JlYXRlIiwiREVGQVVMVCJdLCJleHAiOjE2MjkzNDQ5NDksImlhdCI6MTU5NzgwODk0OSwiYXV0aG9yaXRpZXMiOlsibWVyY2hhbnQuZW50aXR5QXVkaXQuYWN0QXNBZG1pbiIsIm1lcmNoYW50Lm91dGxldC5hY3RBc0FkbWluIiwibWVyY2hhbnQubWVyY2hhbnQuYWN0QXNBZG1pbiIsInVhYS51c2VyLWFwcC1ibGFja2xpc3QuY3JlYXRlIiwidWFhLnVzZXItYXBwLWJsYWNrbGlzdC51cGRhdGUiLCJjYW1wYWlnbi5ycHAtZmlsZXMuYWN0QXNBZG1pbiIsIlJPTEVfQURNSU4iLCJtZXJjaGFudC50ZXJtaW5hbC5hY3RBc0FkbWluIiwidWFhLnVzZXItYXBwLWJsYWNrbGlzdC5hY3RBc0FkbWluIiwibWVyY2hhbnRQdWJsaXNoZXIubXNnLmFjdEFzQWRtaW4iXSwianRpIjoiOTM5NjI3MjctMmYxMS00ODcyLThjYTctN2YyZWY1ZjdmYWRkIiwiY2xpZW50X2lkIjoicm9ib3RhdXRvbWF0aW9uY2xpZW50In0.T-s9pKCDHyjIyuaHL2wQFzI41sBd9omM5p4pH09B9lxtvXLPYGbGRNbxlwcDLTqvVEEQfkEjCY3UzIdR0n2aeVyV63JIIfRCNfy7Kwr5w_IuUZMKC2GZ3einkSbgIb8YF1YXrSjEjPLpOKU0ODUwYIt_X1ocowHqn8qUPhLyiS2aF0TtrSI92zHctsHjOI9aiq1Nvgd1WdbjBb1D1OSibFPcfteOaK5QeKNjS1X2X4TxELy_sIBN2khs_Y-EwnbNFxuitkgHdMIrhkOOKMcSVgZ64__CStuY3lq1oKAfAUU3iHgX6cA2lM5Lnk0HEoGXz7iENH-o_ExwNR4rMfnMGg
+
+#WE PLATFORM
+${WE_PLATFORM_HOST}    https://platform.weomni-test.com
+${WE_PLATFORM}    we-platform

@@ -1,0 +1,23 @@
+*** Variables ***
+${GATEWAY_SESSION}    GATEWAY_SESSION
+${API_HOST}           https://perf-gateway.weomni-test.com
+
+# List of the response code
+${SUCCESS_CODE}               200
+${CREATED_CODE}               201
+${BAD_REQUEST_CODE}           400
+${INTERNAL_SERVER_CODE}       500
+${NOT_FOUND_CODE}             404
+${UNAUTHORIZED}               401
+${FORBIDDEN_CODE}             403
+${METHOD_NOT_ALLOWED}         405
+${ACCEPTED_CODE}              202
+${UNSUPPORTED_MEDIA_TYPE}     415
+
+## Project For CMS
+${WESHOP_PROJECT_ID}    5e9971b74ace2c00018f0f11     #Using GET /api/projects in project-resource
+
+
+#Permanent access token valid 1 year, Expired: 31 Mar 2021
+${ADMIN_USER_ACCESS_TOKEN}    eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiI2Njg2NDQwMzY0NSIsInNjb3BlIjpbIndlc2hvcC5yZXZpZXcucmVhZCIsImFsaS53YXliaWxsLmdldCIsImFsaS5kZWxpdmVyeS5nZXQiLCJtZXJjaGFudC5kb2N1bWVudC5yZWFkIiwiYWxpLmRlbGl2ZXJ5LmNyZWF0ZSIsIndlc2hvcC5vcmRlci5jb25maXJtIiwiYWxpLmRlbGl2ZXJ5LnNlYXJjaCIsImFsaS5xdW90YXRpb24uZ2V0Iiwid2VzaG9wLnNob3AucmVhZCIsImFsaS5kZWxpdmVyeS5wcmVwYXJlIiwiYWxpLnRyYWNraW5nLmdldCIsIndlc2hvcC5yZXZpZXcuY3JlYXRlIiwid2VzaG9wLm1lbnUuY3JlYXRlIiwid2VzaG9wLmdhbGxlcnkuY3JlYXRlIiwiYWxpLmxvZ2lzdGljLmdldCIsIm1lcmNoYW50Lm1lcmNoYW50LnJlYWQiLCJjbXMuY3QuKiIsImFsaS5kZWxpdmVyeS5jYW5jZWwiXSwiZXhwIjoxNjIzNDMxODI0LCJpYXQiOjE1OTE4OTU4MjQsImF1dGhvcml0aWVzIjpbIndlc2hvcC5zaG9wLmFkbWluIiwiUk9MRV9BRE1JTiIsIm1lcmNoYW50Lm1lcmNoYW50LnJlYWQiLCJ3ZXNob3AuYnJhbmQuYWRtaW4iLCJ3ZXNob3Aub3JkZXIuYWRtaW4iXSwianRpIjoiNGYxNzNjYjYtYzVlZi00MWM0LWE2MzEtMWI1MGQ1ZjM0YjQ4IiwiY2xpZW50X2lkIjoibWVyY2hhbnRfZGlzY292ZXJ5X2xvYWRfdGVzdCJ9.obfELWdZUjCp2FDuT0vm1MWUIxR19jL5t4rc9r-xYd53cXz8Gv-dIYhL8SoPR7JNa4kThYP83cXC5HpUWMgLzzT0FyUlA-jFe8CdC3dGHcK6w0joOFbtEqDVI_-gQX2v927Sgi787Yos-C4xuSYqcfzziXlr6WTHMwVgTIRm_I68hNCA3YOyP_rERdscakPB8AAmTY-F94wNXiGdx_HtIaEuLWH6HISUC9UEu1gWF4B8tDSKcE9NPryPZHBbEMxnehNqpJK-NIC3nvnqOyKJpWBvdzfBz9vxrXXMq-Rd5C8opKhtB4bukNPqSv7ZfzDvO4UilENURNS9IibvL9KIJA
+

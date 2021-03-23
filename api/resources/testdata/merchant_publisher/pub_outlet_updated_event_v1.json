@@ -1,0 +1,23 @@
+{
+    "id": 94466,
+    "merchantId": "111131",
+    "merchantBrandId": "0027645",
+    "createBy": "rpp_mtransaction",
+    "createDate": "2019-09-20T10:51:04.419",
+    "modifyBy": "rpp_mtransaction",
+    "modifyDate": "2019-09-20T10:51:04.419",
+    "tmnOutletId": "",
+    "outletId": "00023",
+    "outletNameTh": "1001-5-update",
+    "outletNameEn": "1001-5-update",
+    "outletDetail": "outletDetail_test_update",
+    "contactFirstName": "กรร",
+    "contactLastName": "สุชาติร",
+    "contactMobile": "66600009003",
+    "contactTel": "66600009003",
+    "contactEmail": "hermes.aavn.update@gmail.com",
+    "headQuarter": false,
+    "terminalTotal": null,
+    "trueyouId": "111002762600002",
+    "status": "APPROVE"
+}

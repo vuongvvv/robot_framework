@@ -1,0 +1,12 @@
+{
+  "maxUsePerUser": 10,
+  "name": "Tet_Holiday",
+  "status": "ACTIVE",
+  "totalUse": 100,
+  "codePattern": {
+    "length": 8,
+    "prefix": "TET-",
+    "suffix": "-VUI"
+  },
+  "couponGroup": "TETVUI"
+}

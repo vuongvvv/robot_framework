@@ -1,0 +1,104 @@
+{
+ "name": "IRIS202",
+ "type": "FREEBIE",
+ "rules": [
+   {
+     "onTopPromotionPrice": true,
+     "trigger": {
+       "option": "AND",
+       "exclusions": [
+         {
+           "level": "MERCHANT",
+           "items": [
+             "sku004",
+             "sku005",
+             "sku006"
+           ]
+         }
+       ],
+       "criteria": [
+         {
+           "level": "MERCHANT",
+           "type": "PURCHASE",
+           "couponGroup": null,
+           "minAmount": null,
+           "itemData": {
+             "option": "OR",
+             "items": [
+               {
+                 "id": "sku001",
+                 "quantity": 2
+               },
+               {
+                 "id": "sku002",
+                 "quantity": 2
+               },
+               {
+                 "id": "sku003",
+                 "quantity": 2
+               }
+             ]
+           }
+         }
+       ]
+     },
+     "benefit": {
+       "option": "AND",
+       "data": [
+         {
+           "type": "FREE_ITEM",
+           "level": "SKU",
+           "itemData": {
+             "option": "OR",
+             "items": [
+               {
+                 "id": "sku200",
+                 "quantity": 1
+               },
+               {
+                 "id": "sku300",
+                 "quantity": 1
+               }
+             ]
+           },
+           "amount": 10,
+           "discountType": "SKU"
+         }
+       ]
+     },
+     "isFeatured": true
+   }
+ ],
+ "endDate": "2059-01-05T08:24:20.581Z",
+ "maximumUsePerUser": 2,
+ "platform": "WM",
+ "startDate": "2059-01-01T08:24:20.581Z",
+ "status": "ENABLE",
+  "participants": [
+     {
+
+        "merchantId": "merchant_001",
+        "outletId": "outlet_001",
+        "terminalId": "terminal_001"
+     },
+    {
+      "merchantId": "merchant_002",
+      "outletId": "outlet_002",
+      "terminalId": "terminal_002"
+    }
+   ],
+  "financing": [
+     {
+       "type": "SUBSIDY",
+       "name": "WE_LOVE_SHOPPING"
+     },
+     {
+       "type": "MERCHANT",
+       "name": "merchant_01"
+     },
+     {
+       "type": "SUBSIDY",
+       "name": "TRUE_YOU"
+     }
+  ]
+}

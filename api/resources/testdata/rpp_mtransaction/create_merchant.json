@@ -1,0 +1,167 @@
+{
+    "ref_id":"2f7777899ER959798e81c3c9",
+    "category_id":"5948d696e1382324af7acb05",
+    "subcategory_id":"5948d696e1382324af7acb05",
+    "mcc_code":"1187",
+    "status":"DRAFT",
+    "event_id":"MAKRO002",
+    "prominent_point":"ตรงสี่แยกหัวหมาก ตรงข้ามเซ็นทรัลลาดพร้าว",
+    "device_type":3,
+    "use_true_privilege":false,
+    "status_send_email":false,
+    "sale_id":"5ac44bc0e9da8f53cc215189",
+    "shop_type":1,
+    "merchant_id":"0043215",
+    "revise_by":"tmn",
+    "merchant_name":{
+       "th":"ทดสอบออโต้เมทช็อป",
+       "en":"Test Automate Shop"
+    },
+    "interest":true,
+    "note":"",
+    "service_type":1,
+    "truemoveh_no":"",
+    "trueonline_no":"",
+    "truevision_no":"",
+    "true_privilege_id":[
+ 
+    ],
+    "truevision_type":"",
+    "CAtv_id":"",
+    "use_ecom":true,
+    "store":{
+       "address":{
+          "address":"My Address",
+          "province_id":2,
+          "district_id":55,
+          "subdistrict_id":279,
+          "post_code":"10130"
+       },
+       "tel":"02-12345679",
+       "mobile":"061-0095616",
+       "email":"o2o.qatesting@gmail.com"
+    },
+    "contacts":{
+       "title":"1",
+       "title_other":"",
+       "firstname":"ทดสอบออโต้เมท",
+       "lastname":"ทดสอบออโต้เมท",
+       "tel":"02-12345679",
+       "mobile":"66-610095616",
+       "email":"o2o.qatesting@gmail.com"
+    },
+    "social":{
+       "web":"",
+       "line":"",
+       "facebook":"https://www.facebook.com/",
+       "twitter":"",
+       "instagram":""
+    },
+    "store_image":[
+ 
+    ],
+    "merchant_type":"individual",
+    "menu_image":[
+ 
+    ],
+    "logo_image":[
+ 
+    ],
+    "merchant_detail":{
+       "title":{
+          "en":"",
+          "other_en":"",
+          "th":"3",
+          "other_th":""
+       },
+       "firstname":{
+          "th":"ทดสอบออโต้เมท",
+          "en":"Test Automate"
+       },
+       "lastname":{
+          "th":"ทดสอบออโต้เมท",
+          "en":"Test Automate"
+       },
+       "card_no":"3100602988644",
+       "back_card_no":"jc0602988644",
+       "card_expired":"2025-04-09",
+       "sex":"female",
+       "birthdate":"1993-04-09",
+       "occupation":"0011",
+       "address":{
+          "address":"Address",
+          "province_id":2,
+          "district_id":55,
+          "subdistrict_id":279,
+          "post_code":"10130"
+       },
+       "tel":"0610095616",
+       "mobile":"66-610095616",
+       "email":"o2o.qatesting@gmail.com",
+       "documents":{
+          "commercial_registration":[
+ 
+          ],
+          "book_bank":[
+             "5acaebfae9da8f02ce3c3ec3"
+          ],
+          "thai_license":[
+             "5acaebebe9da8f031b57c9b2"
+          ],
+          "home_license":[
+ 
+          ],
+          "certificate20":[
+ 
+          ],
+          "changename_document":[
+ 
+          ],
+          "professional_license":[
+ 
+          ]
+       }
+    },
+    "tmn":{
+       "status":"WAITING",
+       "qr_information":{
+          "truewallet_no":"0809399077",
+          "qr_closeloop_url":"https://non-prod-qrcode.eggdigital.com/genqr-api/source/qrcode/template/tmp_00103_0851053395_090818_1213431533791623.png",
+          "qrcode_url":"https://non-prod-qrcode.eggdigital.com/genqr-api/source/qrcode/00104_0809399077_161018_1451521539676312.png",
+          "qrcode_url_preview":"https://non-prod-qrcode.eggdigital.com/genqr-api/source/qrcode/00105_0809399077_161018_1451551539676315.png",
+          "qrcode_url_email":"https://non-prod-qrcode.eggdigital.com/genqr-api/source/qrcode/template/tmp_00106_0809399077_161018_1451561539676316.png"
+       },
+       "updated_date":"2018-10-16 14:51:35"
+    },
+    "latitude":13.724760505934,
+    "longitude":100.56293874979,
+    "action":"SELF_REGISTER",
+    "sale_code":"6801000",
+    "imei_id":"594b8875e1382339835438f3",
+    "trueyou":{
+       "merchant_id":"111002214100001",
+       "updated_date":"2018-10-16 14:46:53"
+    },
+    "ecommerce_data":{
+       "owner_firstname":"ทดสอบออโต้เมท",
+       "owner_lastname":"ทดสอบออโต้เมท",
+       "identification_no":"3100602988644",
+       "merchant_name":"ทดสอบออโต้เมท",
+       "store_address":"My Address",
+       "store_zipcode":"10130",
+       "store_tel":"02-12345679",
+       "email":"o2o.qatesting@gmail.com",
+       "mobile":"66-610095616",
+       "store_url":"Test Automate Shop",
+       "category":"Travel & Transportation",
+       "store_province":"สมุทรปราการ",
+       "store_district":"พระประแดง",
+       "store_subdistrict":"บางพึ่ง",
+       "merchant_category":""
+    },
+    "recomend":{
+       "channel":"SELF_REGISTER",
+       "imei_id":"594b8875e1382339835438f3",
+       "region":"BMA6"
+    }
+ }
