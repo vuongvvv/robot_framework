@@ -1,14 +1,13 @@
 *** Settings ***
 Library    String
-Library    AppiumLibrary    run_on_failure=Capture Page Screenshot      timeout=60s
+Library    AppiumLibrary    run_on_failure=Capture Page Screenshot      timeout=20s
 Library    Collections
 Library    Process
 Library    ../../python_library/common.py
-Resource   ../../resources/locators/common/common_locators.robot
 
 *** Keywords ***
 Open Apps
-    [Arguments]     ${app}    ${no_reset}=${False}
+    [Arguments]     ${app}    ${no_reset}=${True}
     ${app_path_android}=    Get Canonical Path      ${CURDIR}/../../../app-path/Android/${app}
     Set To Dictionary    ${${DEVICE}}    noReset=${no_reset}    app=${app_path_android}
     ${OS}=    Convert To Lowercase        ${OS}
@@ -158,9 +157,35 @@ Wait Until Element Is Enabled
     Element Should Be Enabled    ${element}
 
 Click Visible Element
-    [Arguments]    ${element}    ${timeout}=${None}
-    Click Element    ${element}
+    [Arguments]    ${element}    ${delay}=${None}    ${repeat}=1
+    Run Keyword If    '${delay}'!='${None}'    Sleep    ${delay}
+    FOR    ${index}    IN RANGE    0    ${repeat}
+        Click Element    ${element}
+        Sleep    1s    
+    END    
+
+Tap Element
+    [Arguments]    ${element}
+    Tap    ${element}
+
+Input Text Into Element
+    [Arguments]    ${element}    ${text}
+    Input Text    ${element}    ${text}
         
 Wait Element Disappear
     [Arguments]    ${element}    ${timeout}=${None}
-    Wait Until Page Does Not Contain Element    ${element}    ${timeout}  
+    Wait Until Page Does Not Contain Element    ${element}    ${timeout}
+
+Capture Screen
+    [Arguments]    ${file_name}
+    Capture Page Screenshot    ${file_name}.png
+    
+# Get Elements Text
+    # [Arguments]    ${elements_locator}
+    # ${return_elements_text_list}=    Create List
+    # ${elements_list}=    Wait Until Keyword Succeeds    10s    2s    Get Webelements    ${elements_locator}
+    # FOR    ${element}    IN    @{elements_list}
+        # ${element_text}=    Get Text    ${element}
+        # Append To List    ${return_elements_text_list}    ${element_text}    
+    # END
+    # [Return]    ${return_elements_text_list}
