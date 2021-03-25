@@ -53,3 +53,11 @@ Clear Ticker Search
 Verify Filter Ticker By Screenshot
     [Arguments]    ${message}
     Verify By Screenshot    ${message}
+    
+Click Currency Filter
+    Click Visible Element    ${ddl_currency_filter}
+    
+Select Currency
+    [Arguments]    ${currency}
+    ${locator_currency}    Generate Element From Dynamic Locator    ${drd_currency_item_by_name}    ${currency}
+    Click Visible Element    ${locator_currency}    

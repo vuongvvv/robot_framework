@@ -61,7 +61,11 @@ tickers
     Verify Filter Ticker By Screenshot    RESET SEARCH
     
     # Selecting currency will filter search for that selected currency
-    
     # For example BTC will filter results to all CCY/BTC ccy(any currency)
     # Drop-down will open new screen with X and radio button list that should match to web app ticker dropdown 
-    
+    Click Currency Filter
+    Select Currency    USD
+    Verify Filter Ticker By Screenshot    USD FILTER
+    Click Currency Filter
+    Select Currency    Any
+    Verify Filter Ticker By Screenshot    ALL CURRENCY
