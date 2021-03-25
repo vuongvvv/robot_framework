@@ -42,3 +42,14 @@ Verify Column Data Sorting By Screenshot
     Sleep    1s
     Capture Screen    VERIFY_${header_name}_COLUMN_IS_SORTED_${sort_order}
     Log    VERIFY_${header_name}_COLUMN_IS_SORTED_${sort_order}    WARN
+    
+Search Ticker
+    [Arguments]    ${ticker}
+    Input Text Into Element    ${txt_search_tickers}    ${ticker}
+    
+Clear Ticker Search
+    Click Visible Element    ${btn_clear_search_tickers}
+    
+Verify Filter Ticker By Screenshot
+    [Arguments]    ${message}
+    Verify By Screenshot    ${message}

@@ -179,7 +179,12 @@ Wait Element Disappear
 Capture Screen
     [Arguments]    ${file_name}
     Capture Page Screenshot    ${file_name}.png
-    
+
+Verify By Screenshot
+    [Arguments]    ${message}
+    Sleep    1s
+    Capture Screen    ${message}
+    Log    ${message}    WARN    
 # Get Elements Text
     # [Arguments]    ${elements_locator}
     # ${return_elements_text_list}=    Create List

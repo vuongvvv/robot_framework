@@ -1,5 +1,6 @@
 *** Variables ***
-${txt_search_tickers}    //android.widget.EditText[@text='Search']
+${txt_search_tickers}    //android.widget.TextView[@text='']/../preceding-sibling::android.widget.EditText
+${btn_clear_search_tickers}    //android.widget.TextView[@text='']
 ${ddl_filter_tickers}    //android.widget.TextView[@text='Any']/..
 ${btn_collapse_tickers}    //android.widget.TextView[@text='TICKERS']
 ${tab_starred_tickers}    //android.widget.TextView[@text='Starred']
