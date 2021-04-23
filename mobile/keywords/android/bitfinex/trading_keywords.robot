@@ -45,7 +45,7 @@ Verify Column Data Sorting By Screenshot
     
 Search Ticker
     [Arguments]    ${ticker}
-    Wait Element Is Visible    ${txt_search_tickers}    20s
+    Wait Element Is Visible    ${txt_search_tickers}
     Input Text Into Element    ${txt_search_tickers}    ${ticker}
     
 Clear Ticker Search
