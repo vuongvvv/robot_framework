@@ -45,10 +45,12 @@ Verify Column Data Sorting By Screenshot
     
 Search Ticker
     [Arguments]    ${ticker}
+    Wait Element Is Visible    ${txt_search_tickers}    20s
     Input Text Into Element    ${txt_search_tickers}    ${ticker}
     
 Clear Ticker Search
-    Click Visible Element    ${btn_clear_search_tickers}
+    Wait Element Is Visible    ${btn_clear_search_tickers}
+    Click Visible Element    ${btn_clear_search_tickers}    1s    2
     
 Verify Filter Ticker By Screenshot
     [Arguments]    ${message}
@@ -61,3 +63,9 @@ Select Currency
     [Arguments]    ${currency}
     ${locator_currency}    Generate Element From Dynamic Locator    ${drd_currency_item_by_name}    ${currency}
     Click Visible Element    ${locator_currency}    
+    
+Access Trading Pair
+    [Arguments]    ${pair}
+    ${pair_locator}    Generate Element From Dynamic Locator    ${tbl_cell_ticker_by_name}    ${pair}
+    Wait Element Is Visible    ${pair_locator}
+    Click Visible Element    ${pair_locator}

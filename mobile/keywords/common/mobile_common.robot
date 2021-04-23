@@ -162,7 +162,11 @@ Click Visible Element
     FOR    ${index}    IN RANGE    0    ${repeat}
         Click Element    ${element}
         Sleep    1s    
-    END    
+    END  
+    
+Click Visible Element2
+    [Arguments]    ${element}
+        Click Element    ${element}
 
 Tap Element
     [Arguments]    ${element}
