@@ -1,7 +1,6 @@
 *** Settings ***
 Resource    ../../../resources/locators/android/bitfinex/derivatives_locators.robot
 Resource    ../../../../utility/common/locator_common.robot
-Resource    ../../common/mobile_common.robot
 
 *** Keywords ***
 Clear Ticker Search On Derivatives

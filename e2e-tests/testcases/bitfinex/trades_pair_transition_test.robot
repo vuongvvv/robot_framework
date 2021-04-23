@@ -10,6 +10,7 @@ Resource    ../../../mobile/keywords/android/bitfinex/funding_keywords.robot
 Resource    ../../../mobile/keywords/android/bitfinex/funding_pair_keywords.robot
 
 Test Setup    Open Apps    Bitfinex.apk
+Test Teardown    Close Test Application
 *** Variables ***
 
 *** Test Cases ***
@@ -18,20 +19,11 @@ trades_pair_transition_test
     [Tags]     E2E
     Verify Trading Chart Loading Pair    BTCUSD    USD
     Verify Trading Chart Loading Pair    ETHUSD    USD
-
-derivatives_pair_transition_test
-    [Documentation]    derivatives_pair_transition_test
-    [Tags]     E2E
     Tap On Navigation Tab By Name    Derivative
     Verify Derivatives Chart Loading Pair    BTC-PERP    BTC-PERP
-    
-    
-funding_pair_transition_test
-    [Documentation]    derivatives_pair_transition_test
-    [Tags]     E2E
     Tap On Navigation Tab By Name    Funding
     Verify Funding Chart Loading Pair    USD    USD
-    
+
 *** Keywords ***
 Verify Trading Chart Loading Pair
     [Arguments]    ${ticker}    ${pair}

@@ -2,7 +2,6 @@
 Resource    ../../../resources/locators/android/bitfinex/trading_locators.robot
 Resource    ../../../../utility/common/locator_common.robot
 Resource    ../../../../utility/common/list_common.robot
-Resource    ../../common/mobile_common.robot
 
 *** Keywords ***
 Verify Tickers
