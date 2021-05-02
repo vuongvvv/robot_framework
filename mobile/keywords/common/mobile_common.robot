@@ -120,7 +120,7 @@ Swipe Up To Element
 Swipe Down To Element
      [Arguments]    ${expected_locator}
      Wait Until Keyword Succeeds    10x    3s    Run Keywords    Swipe Down
-     ...    AND    Wait Until Element Is Visible    ${expected_locator}      timeout=2s
+     ...    AND    Wait Element Is Visible    ${expected_locator}      2s
 
 Scroll Element To Middle
      [Arguments]    ${element}

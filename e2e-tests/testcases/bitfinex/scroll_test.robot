@@ -14,27 +14,11 @@ Test Teardown    Close Test Application
 *** Variables ***
 
 *** Test Cases ***
-trades_pair_transition_test
-    [Documentation]    trades_pair_transition_test
+scroll_test
+    [Documentation]    scroll_test
     [Tags]     E2E
-    Verify Trading Chart Loading Pair    BTCUSD    BTCUSD
-    Verify Trading Chart Loading Pair    ETHUSD    ETHUSD
-    Verify Trading Chart Loading Pair    USTUSD    USTUSD
-    Verify Trading Chart Loading Pair    ETHBTC    ETHBTC
-    Verify Trading Chart Loading Pair    BTCEUR    BTCEUR
-    Tap On Navigation Tab By Name    Derivative
-    Verify Derivatives Chart Loading Pair    BTC-PERP    BTCF0:USTF0
-    Verify Derivatives Chart Loading Pair    LTC-PERP    LTCF0:USTF0
-    Verify Derivatives Chart Loading Pair    XAUT-PERP    XAUTF0:USTF0
-    Verify Derivatives Chart Loading Pair    EUROPE50-PERP    EUROPE50IXF0:USTF0
-    Verify Derivatives Chart Loading Pair    JPY-PERP    JPYF0:USTF0
-    Tap On Navigation Tab By Name    Funding
-    Verify Funding Chart Loading Pair    USD    USD
-    Verify Funding Chart Loading Pair    BTC    BTC
-    Verify Funding Chart Loading Pair    ETC    ETC
-    Verify Funding Chart Loading Pair    UST    UST
-    Verify Funding Chart Loading Pair    LEO    LEO
-
+    Swipe Down To Element    ${pnl_liquidations}
+    
 *** Keywords ***
 Verify Trading Chart Loading Pair
     [Arguments]    ${ticker}    ${pair}
