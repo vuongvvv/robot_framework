@@ -17,3 +17,6 @@ Search Ticker On Derivatives
     [Arguments]    ${ticker}
     Wait Element Is Visible    ${txt_search_tickers_on_derivatives}
     Input Text Into Element    ${txt_search_tickers_on_derivatives}    ${ticker}
+    
+Verify Ticker Panel Displays On Derivatives
+    Wait Element Is Visible    ${btn_collapse_tickers_on_derivatives}

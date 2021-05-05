@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    ../../../resources/locators/android/bitfinex/trading_pair_locators.robot
 
+Resource    ../../common/mobile_common.robot
 *** Keywords ***
 Verify Chart Loading Success
     [Arguments]    ${expected_load_time}=5s
@@ -8,3 +9,6 @@ Verify Chart Loading Success
     
 Tap On Back Button
     Click Visible Element    ${btn_back_on_trading_pair}
+    
+Scroll Down To Order Form
+    Swipe Down To Element    ${btn_exchange_buy_on_order_form_trading}

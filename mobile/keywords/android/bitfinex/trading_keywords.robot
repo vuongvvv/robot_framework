@@ -68,3 +68,6 @@ Access Trading Pair
     ${pair_locator}    Generate Element From Dynamic Locator    ${tbl_cell_ticker_by_name}    ${pair}
     Wait Element Is Visible    ${pair_locator}
     Click Visible Element    ${pair_locator}
+    
+Verify Ticker Panel Displays
+    Wait Element Is Visible    ${btn_collapse_tickers}

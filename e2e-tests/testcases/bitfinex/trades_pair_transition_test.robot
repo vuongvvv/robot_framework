@@ -12,6 +12,7 @@ Resource    ../../../mobile/keywords/android/bitfinex/funding_pair_keywords.robo
 Test Setup    Open Apps    Bitfinex.apk
 Test Teardown    Close Test Application
 *** Variables ***
+${expected_chart_loading_time}    5s
 
 *** Test Cases ***
 trades_pair_transition_test
@@ -40,7 +41,7 @@ Verify Trading Chart Loading Pair
     [Arguments]    ${ticker}    ${pair}
     Search Ticker    ${ticker}
     Access Trading Pair    ${pair}
-    Verify Chart Loading Success
+    Verify Chart Loading Success    ${expected_chart_loading_time}
     Tap On Back Button
     Clear Ticker Search
     
@@ -48,7 +49,7 @@ Verify Derivatives Chart Loading Pair
     [Arguments]    ${ticker}    ${pair}
     Search Ticker On Derivatives    ${ticker}
     Access Trading Pair On Derivatives    ${pair}
-    Verify Chart Loading Success On Derivatives
+    Verify Chart Loading Success On Derivatives    ${expected_chart_loading_time}
     Tap On Back Button On Derivatives
     Clear Ticker Search On Derivatives
     
@@ -56,6 +57,6 @@ Verify Funding Chart Loading Pair
     [Arguments]    ${ticker}    ${pair}
     Search Ticker On Funding    ${ticker}
     Access Trading Pair On Funding    ${pair}
-    Verify Chart Loading Success On Funding
+    Verify Chart Loading Success On Funding    ${expected_chart_loading_time}
     Tap On Back Button On Funding
     Clear Ticker Search On Funding
