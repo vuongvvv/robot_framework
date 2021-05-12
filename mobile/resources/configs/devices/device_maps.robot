@@ -15,6 +15,7 @@
 
 &{NEXUS_5_ANDROID_10}    deviceName=Nexus 5    platformName=Android    platformVersion=10    automationName=UiAutomator2
 &{NEXUS_5_ANDROID_11}    deviceName=Nexus 5    platformName=Android    platformVersion=11    automationName=UiAutomator2
+&{IPHONE12PROMAX_IOS_14}    deviceName=iPhone 12 Pro Max    platformName=iOS    platformVersion=14.5
 &{HUAWEI}    deviceName=Huawei
 ...    platformVersion=7
 

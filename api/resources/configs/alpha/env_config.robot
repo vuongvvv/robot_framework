@@ -1,6 +1,8 @@
 *** Variables ***
 ${GATEWAY_SESSION}    GATEWAY_SESSION
 ${API_HOST}           https://alpha-gateway.weomni-test.com
+${BITFINEX_SESSION}    BITFINEX_SESSION
+${BITFINEX_HOST}           https://api-pub.bitfinex.com
 ${SDK_SESSION}    SDK_SESSION
 ${SDK_HOST}           https://sdk-auth.trueid-dev.net
 ${TRUE_YOU_SESSION}    TRUE_YOU_SESSION
@@ -22,19 +24,6 @@ ${RPP_HOST}                 https://am-rpp-alpha.eggdigital.com
 ${RPP_SESSION}     RPP_SESSION
 ${RPP_AUTHORIZATION_KEY}=    Basic dGVzdDoxMjM0NTY=
 ${RPP_PAYMENT_AUTHORIZATION_KEY}    Basic cnBwYXBpZ2VlOkY2bmF6RGhRY1llQm5r
-# List of the response code
-${SUCCESS_CODE}               200
-${CREATED_CODE}               201
-${BAD_REQUEST_CODE}           400
-${INTERNAL_SERVER_CODE}       500
-${NOT_FOUND_CODE}             404
-${UNAUTHORIZED}               401
-${FORBIDDEN_CODE}             403
-${METHOD_NOT_ALLOWED}         405
-${ACCEPTED_CODE}              202
-${UNSUPPORTED_MEDIA_TYPE}     415
-${SERVICE_UNAVAILABLE}        503
-${NO_CONTENT_CODE}    204
 
 #RPP Configuration
 ${RPP_GATEWAY_SESSION}        RPP_GATEWAY_SESSION

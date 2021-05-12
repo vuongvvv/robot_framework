@@ -51,3 +51,7 @@ Verify List Is Not Empty
 Verify List Is Empty
     [Arguments]    ${list}
     Should Be Empty    ${list}
+    
+Verify List Length
+    [Arguments]    ${list}    ${length}
+    Length Should Be    ${list}    ${length}    

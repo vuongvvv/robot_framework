@@ -8,24 +8,19 @@ Library    ../../python_library/common.py
 *** Keywords ***
 Open Apps
     [Arguments]     ${app}    ${no_reset}=${True}
-    ${app_path_android}=    Get Canonical Path      ${CURDIR}/../../../app-path/Android/${app}
-    Set To Dictionary    ${${DEVICE}}    noReset=${no_reset}    app=${app_path_android}
+    ${app_path}=    Get Canonical Path      ${CURDIR}/../../../app-path/${app}
     ${OS}=    Convert To Lowercase        ${OS}
-    Run Keyword If      '${OS}' == 'android'
-    ...     Open Application    ${REMOTE_URL_ANDROID}    &{${DEVICE}}
-
-    ##OPEN DEFAULT OR SPECIFIC IOS SIMULATOR
-    ${app_path_ios}=    Get Canonical Path      ${CURDIR}/../../../app-path/iOS/tsm.app
-    Run Keyword If      '${OS}' == 'ios'
-    ...     Open Application    ${REMOTE_URL_IOS}
-    ...     platformName=&{${DEVICE}}[platformName]
-    ...     platformVersion=&{${DEVICE}}[platformVersion]
-    ...     deviceName=&{${DEVICE}}[deviceName]
-    ...     app=${app_path_ios}
-    ...     waitForAppScript='$.delay(5000); true'
-    ...     noReset=False
-    Set Suite Variable    ${OS}
-
+    
+    # ${app_path}    Run Keyword If      '${OS}' == 'android'    Set Variable    ${app_path}.apk
+    # ...    ELSE    Set Variable        ${app_path}.apps
+    
+    ${app_path}    Set Variable If    '${OS}' == 'android'    ${app_path}.apk    ${app_path}.app
+    Set To Dictionary    ${${DEVICE}}    noReset=${no_reset}    app=${app_path}
+    # ${OS}=    Convert To Lowercase        ${OS}
+    # Run Keyword If      '${OS}' == 'android'    
+    Open Application    ${REMOTE_URL}    &{${DEVICE}}
+    Switch To Native Context
+    
 Close Test Application
     Close All Applications
         
