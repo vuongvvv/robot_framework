@@ -114,8 +114,8 @@ Swipe Up To Element
 
 Swipe Down To Element
      [Arguments]    ${expected_locator}
-     Wait Until Keyword Succeeds    10x    3s    Run Keywords    Swipe Down
-     ...    AND    Wait Element Is Visible    ${expected_locator}      2s
+     Wait Until Keyword Succeeds    10x    0.5s    Run Keywords    Swipe Down
+     ...    AND    Wait Element Is Visible    ${expected_locator}      0.5s
 
 Scroll Element To Middle
      [Arguments]    ${element}
@@ -159,10 +159,6 @@ Click Visible Element
         Sleep    1s    
     END  
     
-Click Visible Element2
-    [Arguments]    ${element}
-        Click Element    ${element}
-
 Tap Element
     [Arguments]    ${element}
     Tap    ${element}
@@ -184,12 +180,6 @@ Verify By Screenshot
     Sleep    1s
     Capture Screen    ${message}
     Log    ${message}    WARN    
-# Get Elements Text
-    # [Arguments]    ${elements_locator}
-    # ${return_elements_text_list}=    Create List
-    # ${elements_list}=    Wait Until Keyword Succeeds    10s    2s    Get Webelements    ${elements_locator}
-    # FOR    ${element}    IN    @{elements_list}
-        # ${element_text}=    Get Text    ${element}
-        # Append To List    ${return_elements_text_list}    ${element_text}    
-    # END
-    # [Return]    ${return_elements_text_list}
+
+Send Keys
+    Key
