@@ -181,5 +181,11 @@ Verify By Screenshot
     Capture Screen    ${message}
     Log    ${message}    WARN    
 
-Send Keys
-    Key
+Verify Element Text Should Be
+    [Arguments]    ${element}    ${text}
+    Element Text Should Be    ${element}    ${text}
+    
+Verify Element Text Shoud Not Be
+    [Arguments]    ${element}    ${text}
+    ${element_text}    Get Text    ${element}
+    Should Not Be Equal    ${element_text}    second    

@@ -20,3 +20,6 @@ Verify Affiliate Program Modal
 Verify Login Panel
     Wait Element Is Visible    ${btn_login}    
     Wait Element Is Visible    ${btn_signup}
+    
+Tap On Back Button
+    Click Visible Element    ${btn_back_on_screen}
