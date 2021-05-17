@@ -41,8 +41,7 @@ Tap On Balances Button
 Select Payment Type
     [Arguments]    ${payment_type}    ${amount}
     Click Visible Element    ${drd_payment_type_on_deposit_panel}
-    ${rdo_payment_type}    Generate Element From Dynamic Locator    ${rdo_payment_type_on_choose_payment_type_modal}    ${payment_type}
-    Click Visible Element    ${rdo_payment_type}
+    Tap On Dropdown Item    ${payment_type}
     Wait Element Is Visible    ${btn_next_on_deposit_panel}
     Click Visible Element    ${btn_next_on_deposit_panel}
     Input Text Into Element    ${txt_amount_on_payment_card_deposit_modal}    ${amount}
@@ -52,3 +51,44 @@ Select Payment Type
     Click Visible Element    ${btn_submit_on_payment_card_deposit_modal}
     Click Visible Element    ${btn_okay_please_confirm_popup_on_payment_card_deposit_modal}
     Tap On Back Button
+    Tap On Back Button
+    
+Tap On I Button On Deposit Panel
+    Click Visible Element    ${btn_i_on_deposit_panel}
+    
+Select Currency Conversion
+    [Arguments]    ${amount}
+    Input Text Into Element    ${txt_amount_on_currency_conversion_panel}    ${amount}
+    Click Visible Element    ${drd_from_on_currency_conversion_panel}
+    Tap On Dropdown Item    USD
+    Click Visible Element    ${drd_from_wallet_on_currency_conversion_panel}
+    Tap On Dropdown Item    Exchange
+    Click Visible Element    ${btn_convert_on_currency_conversion_panel}
+    
+Swipe Back To Top
+    Swipe Up To Element    ${pnl_balances}
+    
+Search For Currency On Balance
+    [Arguments]    ${currency}
+    Input Text Into Element    ${txt_search_on_balances_panel}    ${currency}
+
+Tap On Clear Search Button
+    Click Visible Element    ${btn_clear_search_on_balances_panel}
+
+Tap On Cog Icon Button
+    Click Visible Element    ${btn_cog_icon_on_balances_panel}
+    
+Verify Currency On Balances Table
+    [Arguments]    ${currency}
+    ${currency_element}    Generate Element From Dynamic Locator    ${cel_currency_on_balances_table}    ${currency}
+    Wait Element Is Visible    ${currency_element}
+
+Verify Currency Does Not Display On Table
+    [Arguments]    ${currency}
+    ${currency_element}    Generate Element From Dynamic Locator    ${cel_currency_on_balances_table}    ${currency}
+    Wait Element Disappear    ${currency_element}    
+    
+Configure Hide Small Balances
+    Wait Element Is Visible    ${chk_hide_small_balances_on_configure_small_balance_threshold_popup}    
+    Click Visible Element    ${chk_hide_small_balances_on_configure_small_balance_threshold_popup}
+    Click Visible Element    ${btn_save_on_configure_small_balance_threshold_popup}

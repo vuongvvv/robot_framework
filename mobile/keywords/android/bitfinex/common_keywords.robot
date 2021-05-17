@@ -23,3 +23,8 @@ Verify Login Panel
     
 Tap On Back Button
     Click Visible Element    ${btn_back_on_screen}
+    
+Tap On Dropdown Item
+    [Arguments]    ${item}
+    ${rdo_payment_type}    Generate Element From Dynamic Locator    ${rdo_item}    ${item}
+    Click Visible Element    ${rdo_payment_type}

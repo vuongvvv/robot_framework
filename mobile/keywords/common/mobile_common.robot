@@ -41,10 +41,9 @@ Swipe Up
     ${width}=    Get Window Width
     ${height}=   Get Window Height
     ${start_x}=      Evaluate    0.5 * ${width}
-    ${start_y}=      Evaluate    0.7 * ${height}
-    ${offset_x}=     Evaluate    0.5 * ${width}
-    ${offset_y}=     Evaluate    0.3 * ${height}
-    Swipe    ${start_x}    ${start_y}    ${offset_x}    ${offset_y}    1000
+    ${start_y}=      Evaluate    0.5 * ${height}
+    ${offset_y}=     Evaluate    0.7 * ${height}
+    Swipe    ${start_x}    ${start_y}    ${start_x}    ${offset_y}    1000
 
 Swipe Down
     ${width}=    Get Window Width
@@ -110,7 +109,8 @@ Click On Go Button
 
 Swipe Up To Element
     [Arguments]    ${expected_locator}
-    Wait Until Keyword Succeeds    10x    1s    Run Keywords    Swipe Up    AND    Wait Until Page Contains Element    ${expected_locator}      timeout=5s
+    Wait Until Keyword Succeeds    10x    0.5s    Run Keywords    Swipe Up
+    ...    AND    Wait Element Is Visible    ${expected_locator}      0.5s
 
 Swipe Down To Element
      [Arguments]    ${expected_locator}
@@ -166,7 +166,12 @@ Tap Element
 Input Text Into Element
     [Arguments]    ${element}    ${text}
     Input Text    ${element}    ${text}
-        
+
+Clear And Input Text
+    [Arguments]    ${element}    ${text}
+    Clear Text    ${element}
+    Input Text    ${element}    ${text}
+               
 Wait Element Disappear
     [Arguments]    ${element}    ${timeout}=${None}
     Wait Until Page Does Not Contain Element    ${element}    ${timeout}

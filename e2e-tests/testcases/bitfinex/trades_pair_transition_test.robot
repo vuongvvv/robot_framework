@@ -50,7 +50,7 @@ Verify Derivatives Chart Loading Pair
     Search Ticker On Derivatives    ${ticker}
     Access Trading Pair On Derivatives    ${pair}
     Verify Chart Loading Success On Derivatives    ${expected_chart_loading_time}
-    Tap On Back Button On Derivatives
+    Tap On Back Button
     Clear Ticker Search On Derivatives
     
 Verify Funding Chart Loading Pair
@@ -58,5 +58,5 @@ Verify Funding Chart Loading Pair
     Search Ticker On Funding    ${ticker}
     Access Trading Pair On Funding    ${pair}
     Verify Chart Loading Success On Funding    ${expected_chart_loading_time}
-    Tap On Back Button On Funding
+    Tap On Back Button
     Clear Ticker Search On Funding
