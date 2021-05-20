@@ -9,18 +9,16 @@ Library    ../../python_library/common.py
 Open Apps
     [Arguments]     ${app}    ${no_reset}=${True}
     ${app_path}=    Get Canonical Path      ${CURDIR}/../../../app-path/${app}
-    ${OS}=    Convert To Lowercase        ${OS}
-    
-    # ${app_path}    Run Keyword If      '${OS}' == 'android'    Set Variable    ${app_path}.apk
-    # ...    ELSE    Set Variable        ${app_path}.apps
-    
+    ${OS}    Convert To Lowercase        ${OS}
     ${app_path}    Set Variable If    '${OS}' == 'android'    ${app_path}.apk    ${app_path}.app
     Set To Dictionary    ${${DEVICE}}    noReset=${no_reset}    app=${app_path}
-    # ${OS}=    Convert To Lowercase        ${OS}
-    # Run Keyword If      '${OS}' == 'android'    
     Open Application    ${REMOTE_URL}    &{${DEVICE}}
     Switch To Native Context
-    
+
+Open App On Browser Stack
+    Set To Dictionary    ${${DEVICE}}    project=Bitfinex    build=4.4.0    name=mobile
+    Open Application    http://hub-cloud.browserstack.com/wd/hub    &{${DEVICE}}
+        
 Close Test Application
     Close All Applications
         

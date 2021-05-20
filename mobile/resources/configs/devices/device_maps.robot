@@ -15,6 +15,10 @@
 
 &{NEXUS_5_ANDROID_10}    deviceName=Nexus 5    platformName=Android    platformVersion=10    automationName=UiAutomator2
 &{NEXUS_5_ANDROID_11}    deviceName=Nexus 5    platformName=Android    platformVersion=11    automationName=UiAutomator2
+
+&{BROWSERSTACK_GOOGLE_PIXEL_3_ANDROID_9}    deviceName=Google Pixel 3    platformName=Android    platformVersion=9.0   automationName=UiAutomator2
+...    app=bs://b7195213affc6b3ff0a1a6eb74e5977117b04024    browserstack.user=vuongvan_j7a0w4    browserstack.key=Q3bLpxQdy8ZPzqmNuAov
+
 &{IPHONE12PROMAX_IOS_14}    deviceName=iPhone 12 Pro Max    platformName=iOS    platformVersion=14.5
 &{HUAWEI}    deviceName=Huawei
 ...    platformVersion=7

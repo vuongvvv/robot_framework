@@ -9,7 +9,8 @@ Resource    ../../../mobile/keywords/android/bitfinex/derivatives_pair_keywords.
 Resource    ../../../mobile/keywords/android/bitfinex/funding_keywords.robot
 Resource    ../../../mobile/keywords/android/bitfinex/funding_pair_keywords.robot
 
-Test Setup    Open Apps    Bitfinex
+# Test Setup    Open Apps    Bitfinex
+Test Setup    Open App On Browser Stack
 Test Teardown    Close Test Application
 *** Variables ***
 ${expected_chart_loading_time}    5s
