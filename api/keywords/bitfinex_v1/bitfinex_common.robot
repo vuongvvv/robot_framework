@@ -18,3 +18,4 @@ Create Authenticated Header
     ${signature}    Encode SHA384    ${BITFINEX_API_SECRET}    ${base64_payload}
     
     &{BITFINEX_V1_HEADER}    Create Dictionary    X-BFX-APIKEY=${api_key}    X-BFX-PAYLOAD=${base64_payload}    X-BFX-SIGNATURE=${signature}
+    Set Test Variable    ${BITFINEX_V1_HEADER}
