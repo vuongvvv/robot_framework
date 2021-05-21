@@ -3,6 +3,7 @@ Library    RequestsLibrary
 Resource    ../../../utility/common/list_common.robot
 Resource    ../../../utility/common/string_common.robot
 Resource    ../../../utility/common/number_common.robot
+Resource    ../../../utility/common/json_common.robot
 
 *** Variables ***
 
@@ -31,3 +32,13 @@ Verify Response Field Is Number
     FOR    ${element}    IN    @{list}
         Should Be Number    ${element}[${field_index}]
     END
+    
+Fetch Property From Response
+    [Arguments]    ${property}    ${return_name}
+    ${property_value}    Get Property Value From Json By Index    ${property}
+    Set Test Variable    ${${return_name}}    ${property_value}
+    
+Fetch All Property Values
+    [Arguments]    ${property}    ${return_name}
+    ${property_value}    Get All Property Value    ${property}
+    Set Test Variable    ${${return_name}}    ${property_value}

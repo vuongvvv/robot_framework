@@ -14,21 +14,19 @@ Test Teardown     Delete All Sessions
 authenticated_api_test
     [Documentation]    The tickers endpoint provides a high level overview of the state of the market. It shows the current best bid and ask, the last traded price, as well as information on the daily volume and price movement over the last day. The endpoint can retrieve multiple tickers with a single query.
     [Tags]    Regression    High    Smoke
-    # Post Account Infor
-    # Response Correct Code    ${SUCCESS_CODE}
-    # Post Account Fee
-    # Response Correct Code    ${SUCCESS_CODE}
-    # Post Summary
-    # Response Correct Code    ${SUCCESS_CODE}
-    # Post Deposit    bitcoin    exchange
-    # Response Correct Code    ${SUCCESS_CODE}
-    # Post Key Permissions
-    # Response Correct Code    ${SUCCESS_CODE}
-    # Post Margin Information
-    # Response Correct Code    ${SUCCESS_CODE}
-    # Post Wallet Balances
-    # Response Correct Code    ${SUCCESS_CODE}
-    Post Transfer Between Wallets    1    BTC    deposit    trading
+    Post Account Infor
+    Response Correct Code    ${SUCCESS_CODE}
+    Post Account Fee
+    Response Correct Code    ${SUCCESS_CODE}
+    Post Summary
+    Response Correct Code    ${SUCCESS_CODE}
+    Post Deposit    bitcoin    exchange
+    Response Correct Code    ${SUCCESS_CODE}
+    Post Key Permissions
+    Response Correct Code    ${SUCCESS_CODE}
+    Post Margin Information
     Response Correct Code    ${SUCCESS_CODE}
     Post Wallet Balances
+    Response Correct Code    ${SUCCESS_CODE}
+    Post Transfer Between Wallets    1    BTC    deposit    trading
     Response Correct Code    ${SUCCESS_CODE}

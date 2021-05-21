@@ -27,3 +27,10 @@ Generate Random Number In Range
     [Arguments]    ${range_min}    ${range_max}
     ${return_value}    Evaluate    random.sample(range(${range_min}, ${range_max}), 1)    random
     [Return]    ${return_value}[0]
+    
+Replace String From Right
+    [Arguments]    ${string}    ${search_for}    ${replace_with}
+    ${rest}    ${last}    Split String From Right    ${string}    ${search_for}    1
+    ${return_string}    Set Variable    ${rest}${replace_with}
+    [Return]    ${return_string}
+        
