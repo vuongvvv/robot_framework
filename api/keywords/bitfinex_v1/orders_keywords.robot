@@ -74,3 +74,8 @@ Post Order Status
     &{BITFINEX_V1_HEADER}    Create Dictionary    X-BFX-APIKEY=${api_key}    X-BFX-PAYLOAD=${base64_payload}    X-BFX-SIGNATURE=${signature}
     ${RESP}    Post Request    ${BITFINEX_SESSION_V1}    /v1/order/status    headers=&{BITFINEX_V1_HEADER}
     Set Test Variable    ${RESP}
+    
+Post Active Order
+    Create Authenticated Header    /v1/orders
+    ${RESP}    Post Request    ${BITFINEX_SESSION_V1}    /v1/orders    headers=&{BITFINEX_V1_HEADER}
+    Set Test Variable    ${RESP}

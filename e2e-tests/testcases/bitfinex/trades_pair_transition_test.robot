@@ -1,16 +1,16 @@
 *** Settings ***
 
 Resource    ../../../mobile/resources/init.robot
-Resource    ../../../mobile/keywords/android/bitfinex/common_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/trading_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/trading_pair_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/derivatives_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/derivatives_pair_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/funding_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/funding_pair_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/common_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/trading_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/trading_pair_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/derivatives_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/derivatives_pair_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/funding_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/funding_pair_keywords.robot
 
-# Test Setup    Open Apps    Bitfinex
-Test Setup    Open App On Browser Stack
+Test Setup    Open Apps    Bitfinex
+# Test Setup    Open App On Browser Stack
 Test Teardown    Close Test Application
 *** Variables ***
 ${expected_chart_loading_time}    5s

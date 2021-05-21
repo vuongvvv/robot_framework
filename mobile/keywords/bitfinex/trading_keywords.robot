@@ -1,7 +1,7 @@
 *** Settings ***
-Resource    ../../../resources/locators/android/bitfinex/trading_locators.robot
-Resource    ../../../../utility/common/locator_common.robot
-Resource    ../../../../utility/common/list_common.robot
+Resource    ../../resources/locators/android/bitfinex/trading_locators.robot
+Resource    ../../../utility/common/locator_common.robot
+Resource    ../../../utility/common/list_common.robot
 
 *** Keywords ***
 Verify Tickers

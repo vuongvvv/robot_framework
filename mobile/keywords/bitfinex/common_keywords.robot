@@ -1,7 +1,7 @@
 *** Settings ***
-Resource    ../../../resources/locators/android/bitfinex/common_locators.robot
-Resource    ../../../../utility/common/locator_common.robot
-Resource    ../../common/mobile_common.robot
+Resource    ../../resources/locators/android/bitfinex/common_locators.robot
+Resource    ../../../utility/common/locator_common.robot
+Resource    ../common/mobile_common.robot
 
 *** Keywords ***
 Tap On Navigation Tab By Name

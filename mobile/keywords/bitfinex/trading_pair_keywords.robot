@@ -1,7 +1,7 @@
 *** Settings ***
-Resource    ../../../resources/locators/android/bitfinex/trading_pair_locators.robot
+Resource    ../../resources/locators/android/bitfinex/trading_pair_locators.robot
 
-Resource    ../../common/mobile_common.robot
+Resource    ../common/mobile_common.robot
 *** Keywords ***
 Verify Chart Loading Success
     [Arguments]    ${expected_load_time}=5s

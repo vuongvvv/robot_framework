@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    ../../../resources/locators/android/bitfinex/funding_locators.robot
-Resource    ../../../../utility/common/locator_common.robot
+Resource    ../../resources/locators/android/bitfinex/funding_locators.robot
+Resource    ../../../utility/common/locator_common.robot
 
 *** Keywords ***
 Clear Ticker Search On Funding

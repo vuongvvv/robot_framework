@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../../../resources/locators/android/bitfinex/funding_pair_locators.robot
+Resource    ../../resources/locators/android/bitfinex/funding_pair_locators.robot
 
 *** Keywords ***
 Verify Chart Loading Success On Funding
