@@ -16,7 +16,7 @@ Test Teardown    Close Test Application
 *** Test Cases ***
 scroll_test
     [Documentation]    scroll_test
-    [Tags]     E2E
+    [Tags]     progress
     Swipe Down To Element    ${pnl_liquidations}
     
 *** Keywords ***

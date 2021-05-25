@@ -16,9 +16,9 @@ Test Teardown    Close Test Application
 ${expected_chart_loading_time}    5s
 
 *** Test Cases ***
-trades_pair_transition_test
-    [Documentation]    trades_pair_transition_test
-    [Tags]     E2E
+screens_transition_and_chart_loading_test
+    [Documentation]    screens_transition_and_chart_loading_test
+    [Tags]     smoke
     Verify Trading Chart Loading Pair    BTCUSD    BTCUSD
     Verify Trading Chart Loading Pair    ETHUSD    ETHUSD
     Verify Trading Chart Loading Pair    USTUSD    USTUSD

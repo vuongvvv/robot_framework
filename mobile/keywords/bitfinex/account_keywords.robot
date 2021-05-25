@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    ../../../resources/locators/android/bitfinex/account_locators.robot
-Resource    ../../common/mobile_common.robot
+Resource    ../../resources/locators/android/bitfinex/account_locators.robot
+Resource    ../common/mobile_common.robot
 
 *** Keywords ***
 Logout Bitfinex App
