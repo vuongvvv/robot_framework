@@ -1,15 +1,15 @@
 *** Settings ***
 
 Resource    ../../../mobile/resources/init.robot
-Resource    ../../../mobile/keywords/android/bitfinex/common_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/trading_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/trading_pair_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/derivatives_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/derivatives_pair_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/funding_keywords.robot
-Resource    ../../../mobile/keywords/android/bitfinex/funding_pair_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/common_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/trading_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/trading_pair_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/derivatives_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/derivatives_pair_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/funding_keywords.robot
+Resource    ../../../mobile/keywords/bitfinex/funding_pair_keywords.robot
 
-Test Setup    Open Apps    Bitfinex.apk
+Test Setup    Open Apps    Bitfinex
 Test Teardown    Close Test Application
 *** Variables ***
 ${expected_chart_loading_time}    5s
@@ -21,13 +21,23 @@ order_form_test
     Search Ticker    BTCUSD
     Access Trading Pair    BTCUSD
     Scroll Down To Order Form
-    # - Submitting the form with invalid number values should highlight the fields in red
-    # - taping on book rows in order book should populate the  price you selected and max amount 
-    # - order form is collapsible by taping on the header
-    # - there are 2 tabs: Exchange and Margin
-    # Exchange have Balance info in quote and base currency, the values are same to the available balance
-    # - switching to Margin tab reveals  
-        # the reduce-only option checkbox appears 
-        # and the buttons change from Exchange Buy & Sell to Margin Buy & Sell
+    Select Order Type    Market
+    Verify Max Sell Buy Buttons
+    Create Market Order    0.00009    buy
+    Create Market Order    0.00009    sell
+    Select Order Form Tab    Margin
+    Scroll Down To Order Form
+    Create Market Order    0.00009    buy    ${True}
+    Create Market Order    0.00009    sell    ${True}
+    
+    # Check created orders by API
+    
 
-    # Open non-margin pairs, like AGI/USD (or any other without margin)  will have only Exchange   
+
+
+
+
+
+    # Exchange have Balance info in quote and base currency, the values are same to the available balance    
+
+    # Open non-margin pairs, like AGI/USD (or any other without margin)  will have only Exchange

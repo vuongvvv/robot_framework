@@ -32,5 +32,4 @@ Replace String From Right
     [Arguments]    ${string}    ${search_for}    ${replace_with}
     ${rest}    ${last}    Split String From Right    ${string}    ${search_for}    1
     ${return_string}    Set Variable    ${rest}${replace_with}
-    [Return]    ${return_string}
-        
+    [Return]    ${return_string}        

@@ -22,10 +22,6 @@ Open App On Browser Stack
 Close Test Application
     Close All Applications
         
-Hide The Keyboard
-     Run Keyword If    '${OS}' == 'android'      Hide Keyboard
-     Run Keyword If    '${OS}' == 'ios'          Hide Keyboard       &{keyboard}[keyboard_done]
-
 Swipe To Left
      ${width}=    Get Window Width
      ${height}=   Get Window Height
@@ -56,31 +52,6 @@ Select Item On List View
      @{elements}     Get Webelements    ${tbl_list}
      Click Element    @{elements}[${item}]
 
-Click On Menu
-    [Arguments]     ${mnu}
-    Click Element       ${mnu}
-
-Click On Back Button
-    [Arguments]     ${btn_back}
-    Click Element       ${btn_back}
-
-Click On OK Button
-    [Arguments]     ${btn_ok}
-    Click Element       ${btn_ok}
-
-Alert Popup Is Displayed
-    [Arguments]     ${alert}
-    Wait Until Element Is Visible       ${alert}        timeout=10s
-
-Click On Allow Button
-    [Arguments]     ${btn_allow}
-    Wait Until Element Is Visible        ${btn_allow}
-    Click Element       ${btn_allow}
-
-Accept Alert Popup
-    ${status}   ${value} =      Run Keyword And Ignore Error        Alert Popup Is Displayed    &{alert}[page_alert]
-    Run Keyword If      '${status}' == 'PASS'       Click On Allow Button    &{alert}[btn_allow]
-    Run Keyword Unless  '${status}' == 'PASS'       Wait Until Page Does Not Contain Element    &{alert}[page_alert]
 
 Switch To Webview Context
     ${default_context}=    Get Current Context
@@ -95,15 +66,6 @@ Switch To Native Context
      ${count_list}=    Get Length    ${all_context}
      ${native_context}=    Get From List    ${all_context}    0
      Switch To Context    ${native_context}
-
-Page Should Contain Property With Value
-    [Arguments]    ${page_content}
-    Page Should Contain Text    ${page_content}
-
-Click On Go Button
-    [Arguments]     ${btn_go}
-    Wait Until Element Is Visible        ${btn_go}
-    Click Element       ${btn_go}
 
 Swipe Up To Element
     [Arguments]    ${expected_locator}
@@ -157,13 +119,19 @@ Click Visible Element
         Sleep    1s    
     END  
     
-Tap Element
+Get Element Text
     [Arguments]    ${element}
-    Tap    ${element}
+    ${return_text}    Get Text    ${element}
+    [Return]    ${return_text}
+
+Clear Element Text
+    [Arguments]    ${element}
+    Clear Text    ${element}
 
 Input Text Into Element
-    [Arguments]    ${element}    ${text}
+    [Arguments]    ${element}    ${text}    ${hide_keyboard}=${False}
     Input Text    ${element}    ${text}
+    Run Keyword If    '${hide_keyboard}'=='${True}'    Hide Keyboard
 
 Clear And Input Text
     [Arguments]    ${element}    ${text}
