@@ -28,7 +28,7 @@ order_form_test
     Access Trading Pair    BTCUSD
     
     # # MARKET order
-    # Scroll Down To Order Form
+    Scroll Down To Order Form
     # Select Order Type    Market
     # Verify Max Sell Buy Buttons
     # Create Market Order    0.00009    buy
@@ -72,6 +72,11 @@ order_form_test
     # LIMIT order
     Select Order Type    Limit
     Verify Limit Order Form Button
+    Create Exchange Order    max_bid    0.00009    buy
+    Create Exchange Order    min_ask    0.00009    sell
+    Post Active Order
+    
+    # Post Cancel All Orders
     # Exchange have Balance info in quote and base currency, the values are same to the available balance    
 
     # Open non-margin pairs, like AGI/USD (or any other without margin)  will have only Exchange

@@ -55,18 +55,36 @@ Create Market Order
     [Arguments]    ${amount}    ${transaction_type}    ${reduce_only}=${False}
     Clear Element Text    ${txt_order_amount_on_order_form_trading}    
     Input Text Into Element    ${txt_order_amount_on_order_form_trading}    ${amount}    ${True}
-    Tap On Create Order    ${transaction_type}
     Run Keyword If    '${reduce_only}'=='${True}'    Click Visible Element    ${chk_reduce_only_on_order_form_trading}
-    Click Visible Element    ${btn_confirm_on_confirm_order_popup}
-    Sleep    3s
+    Confirm Order    ${transaction_type}    
     Run Keyword If    '${reduce_only}'=='${True}'    Click Visible Element    ${chk_reduce_only_on_order_form_trading}
     
-Tap On Create Order
+Confirm Order
     [Arguments]    ${transaction_type}
     Run Keyword If    '${transaction_type}'=='buy'    Click Visible Element    ${btn_exchange_buy_on_order_form_trading}
     ...    ELSE    Click Visible Element    ${btn_exchange_sell_on_order_form_trading}
+    Click Visible Element    ${btn_confirm_on_confirm_order_popup}
+    Sleep    3s
 
 Select Order Form Tab
     [Arguments]    ${tab_name}
     ${tab_order}    Generate Element From Dynamic Locator    ${tab_exchange_margin}    ${tab_name}
     Click Visible Element    ${tab_order}
+    
+Input Order Price
+    [Arguments]    ${price}=max_bid
+    Run Keyword If    '${price}'=='max_bid'    Click Visible Element    ${btn_max_bid_on_order_form_trading}
+    ...    ELSE IF    '${price}'=='min_ask'    Click Visible Element    ${btn_min_ask_on_order_form_trading}
+    ...    ELSE    Input Text Into Element    ${txt_order_price_on_order_form_trading}    ${price}
+    
+Input Order Amount
+    [Arguments]    ${amount}=max_buy
+    Run Keyword If    '${amount}'=='max_buy'    Click Visible Element    ${btn_max_buy_on_order_form_trading}
+    ...    ELSE IF    '${amount}'=='max_sell'    Click Visible Element    ${btn_max_sell_on_order_form_trading}
+    ...    ELSE    Input Text Into Element    ${txt_order_amount_on_order_form_trading}    ${amount}        
+
+Create Exchange Order
+    [Arguments]    ${price}    ${amount}    ${transaction_type}
+    Input Order Price    ${price}
+    Input Order Amount    ${amount}
+    Confirm Order    ${transaction_type}
