@@ -32,6 +32,11 @@ Verify Response Field Is Number
     FOR    ${element}    IN    @{list}
         Should Be Number    ${element}[${field_index}]
     END
+
+Response Property Should Be
+    [Arguments]    ${property}    ${value}    ${index}=0
+    ${property_value}    Get Property Value From Json By Index    ${property}    ${index}
+    Should Be Equal    ${property_value}    ${value}
     
 Fetch Property From Response
     [Arguments]    ${property}    ${return_name}

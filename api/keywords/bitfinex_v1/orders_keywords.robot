@@ -79,3 +79,9 @@ Post Active Order
     Create Authenticated Header    /v1/orders
     ${RESP}    Post Request    ${BITFINEX_SESSION_V1}    /v1/orders    headers=&{BITFINEX_V1_HEADER}
     Set Test Variable    ${RESP}
+
+Post Order History
+    [Documentation]    https://docs.bitfinex.com/v1/reference#rest-auth-orders-history
+    Create Authenticated Header    /v1/orders/hist
+    ${RESP}    Post Request    ${BITFINEX_SESSION_V1}    /v1/orders/hist    headers=&{BITFINEX_V1_HEADER}
+    Set Test Variable    ${RESP}

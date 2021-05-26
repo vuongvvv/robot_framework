@@ -21,10 +21,35 @@ Select Order Type
 Verify Max Sell Buy Buttons
     Click Visible Element    ${btn_max_buy_on_order_form_trading}    0.5
     ${amount_max_buy}    Get Element Text    ${txt_order_amount_on_order_form_trading}
-    Should Not Be Empty    ${amount_max_buy}    
+    Should Not Be Empty    ${amount_max_buy}
+    Clear Element Text    ${txt_order_amount_on_order_form_trading}
     Click Visible Element    ${btn_max_sell_on_order_form_trading}    0.5
     ${amount_max_sell}    Get Element Text    ${txt_order_amount_on_order_form_trading}
     Should Not Be Empty    ${amount_max_sell}
+    Clear Element Text    ${txt_order_amount_on_order_form_trading}
+
+Verify Limit Order Form Button
+    Click Visible Element    ${btn_max_bid_on_order_form_trading}    0.5
+    ${max_bid}    Get Element Text    ${txt_order_price_on_order_form_trading}
+    Should Not Be Empty    ${max_bid}
+    Clear Element Text    ${txt_order_price_on_order_form_trading}
+    
+    Click Visible Element    ${btn_min_ask_on_order_form_trading}    0.5
+    ${min_ask}    Get Element Text    ${txt_order_price_on_order_form_trading}
+    Should Not Be Empty    ${min_ask}
+    Clear Element Text    ${txt_order_price_on_order_form_trading}
+    
+    Click Visible Element    ${btn_top_bid_on_order_form_trading}    0.5
+    ${top_bid}    Get Element Text    ${txt_order_price_on_order_form_trading}
+    Should Not Be Empty    ${top_bid}
+    Clear Element Text    ${txt_order_price_on_order_form_trading}
+    
+    Click Visible Element    ${btn_top_ask_on_order_form_trading}    0.5
+    ${top_ask}    Get Element Text    ${txt_order_price_on_order_form_trading}
+    Should Not Be Empty    ${top_ask}
+    
+    Verify Max Sell Buy Buttons
+    Clear Element Text    ${txt_order_price_on_order_form_trading}
     
 Create Market Order
     [Arguments]    ${amount}    ${transaction_type}    ${reduce_only}=${False}

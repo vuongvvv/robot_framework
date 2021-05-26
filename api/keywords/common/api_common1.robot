@@ -8,8 +8,7 @@ Library    Collections
 Resource   validation_common.robot
 Resource   gateway_common.robot
 Resource   ../../../utility/common/list_common.robot
-Resource    json_common.robot
-Library    ../../python_library/common/StringLibrary.py
+Resource    ../../../utility/common/json_common.robot
 
 *** Variables ***
 ${number_regex}    ^\\d+$

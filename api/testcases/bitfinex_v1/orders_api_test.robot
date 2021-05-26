@@ -28,7 +28,13 @@ orders_api_test
     # Post Cancel All Orders
     # Response Correct Code    ${SUCCESS_CODE}
     # Post Order Status    ${ORDER_ID}
-    Post Order Status    1232184158
+    # Post Order Status    1232184158
     # Response Correct Code    ${SUCCESS_CODE}
     # Post Active Order
     # Response Correct Code    ${SUCCESS_CODE}
+    Post Order History
+    Response Correct Code    ${SUCCESS_CODE}
+    Response Property Should Be    .src    web
+    Response Property Should Be    .original_amount    0.00009
+    Response Property Should Be    .executed_amount    0.00009
+    
