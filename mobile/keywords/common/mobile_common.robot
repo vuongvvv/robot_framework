@@ -13,7 +13,6 @@ Open Apps
     ${app_path}    Set Variable If    '${OS}' == 'android'    ${app_path}.apk    ${app_path}.app
     Set To Dictionary    ${${DEVICE}}    noReset=${no_reset}    app=${app_path}
     Open Application    ${REMOTE_URL}    &{${DEVICE}}
-    Switch To Native Context
 
 Open App On Browser Stack
     Set To Dictionary    ${${DEVICE}}    project=Bitfinex    build=4.4.0    name=mobile

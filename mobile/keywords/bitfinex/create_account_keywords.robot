@@ -1,6 +1,5 @@
 *** Settings ***
-Resource    ../../../resources/locators/android/bitfinex/create_account_locators.robot
-Resource    ../../common/mobile_common.robot
+Resource    ../../resources/locators/android/bitfinex/create_account_locators.robot
 
 *** Keywords ***
 Fill Account Information

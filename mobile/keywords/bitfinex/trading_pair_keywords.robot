@@ -3,7 +3,6 @@ Resource    ../../resources/locators/android/bitfinex/trading_pair_locators.robo
 Resource    ../../../utility/common/locator_common.robot
 Resource    ../../../utility/common/string_common.robot
 
-Resource    ../common/mobile_common.robot
 *** Keywords ***
 Verify Chart Loading Success
     [Arguments]    ${expected_load_time}=5s

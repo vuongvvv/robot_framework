@@ -1,6 +1,5 @@
 *** Settings ***
 Resource    ../../resources/locators/android/bitfinex/login_locators.robot
-Resource    ../common/mobile_common.robot
 
 *** Keywords ***
 Verify Login Screen

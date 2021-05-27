@@ -1,7 +1,6 @@
 *** Settings ***
-Resource    ../../../resources/locators/android/bitfinex/home_locators.robot
-Resource    ../../../../utility/common/locator_common.robot
-Resource    ../../common/mobile_common.robot
+Resource    ../../resources/locators/android/bitfinex/home_locators.robot
+Resource    ../../../utility/common/locator_common.robot
 
 *** Keywords ***
 Verify Account Buttons Display
