@@ -4,3 +4,7 @@ app-path/Android/Bitfinex.apk
 red.xml
 *.pyc
 app-path/*
+*.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
